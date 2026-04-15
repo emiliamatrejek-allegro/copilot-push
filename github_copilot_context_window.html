@@ -1,0 +1,119 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #fff; color: #333; }
+  .cw-root { padding: 16px 20px; }
+  .bar-track { width: 100%; height: 28px; background: #f5f5f5; border-radius: 6px; overflow: hidden; display: flex; border: 1px solid #e0e0e0; }
+  .bar-seg { height: 100%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 500; white-space: nowrap; overflow: hidden; transition: width .5s ease; }
+  .seg-system   { background: #534AB7; color: #fff; }
+  .seg-files    { background: #0F6E56; color: #fff; }
+  .seg-history  { background: #185FA5; color: #fff; }
+  .seg-cursor   { background: #993C1D; color: #fff; }
+  .seg-response { background: #555; color: #fff; }
+  .seg-free     { background: #f0f0f0; color: #999; flex: 1; }
+  .top-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .scenario-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .sc-btn { font-size: 11px; padding: 4px 10px; border-radius: 14px; border: 1px solid #ddd; background: #fff; color: #666; cursor: pointer; transition: all .15s; }
+  .sc-btn:hover { border-color: #bbb; }
+  .sc-btn.active { background: #FF5A00; color: #fff; border-color: #FF5A00; }
+  .tokens-label { font-size: 10px; color: #999; text-align: right; margin-top: 3px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 8px; font-size: 11px; }
+  .leg-item { display: flex; align-items: center; gap: 5px; color: #666; cursor: pointer; padding: 2px 0; }
+  .leg-item:hover { color: #333; }
+  .leg-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+  .info-box { margin-top: 10px; background: #fafafa; border-radius: 6px; border: 1px solid #e8e8e8; padding: 10px 14px; font-size: 11px; color: #555; line-height: 1.5; min-height: 40px; transition: opacity .25s; }
+  .info-box strong { color: #333; font-weight: 600; }
+  .info-box code { background: #f0f0f0; padding: 1px 4px; border-radius: 3px; font-size: 10px; }
+</style>
+
+<div class="cw-root">
+  <div class="top-row">
+    <div class="scenario-row" id="scenarios">
+      <button class="sc-btn active" data-id="small">Mały plik</button>
+      <button class="sc-btn" data-id="medium">Średni projekt</button>
+      <button class="sc-btn" data-id="large">Duży refactor</button>
+      <button class="sc-btn" data-id="full">Prawie pełne</button>
+    </div>
+  </div>
+
+  <div class="bar-track" id="bar">
+    <div class="bar-seg seg-system"  id="s-system"  title="System prompt">System</div>
+    <div class="bar-seg seg-files"   id="s-files"   title="Otwarte pliki"></div>
+    <div class="bar-seg seg-history" id="s-history" title="Historia czatu"></div>
+    <div class="bar-seg seg-cursor"  id="s-cursor"  title="Kursor / snippet"></div>
+    <div class="bar-seg seg-response"id="s-response"title="Odpowiedź"></div>
+    <div class="bar-seg seg-free"    id="s-free">wolne</div>
+  </div>
+  <div class="tokens-label" id="tokens-label">— / 64 000 tokenów</div>
+
+  <div class="legend">
+    <div class="leg-item" data-seg="system">  <div class="leg-dot" style="background:#534AB7"></div>System prompt</div>
+    <div class="leg-item" data-seg="files">   <div class="leg-dot" style="background:#0F6E56"></div>Pliki / @workspace</div>
+    <div class="leg-item" data-seg="history"> <div class="leg-dot" style="background:#185FA5"></div>Historia czatu</div>
+    <div class="leg-item" data-seg="cursor">  <div class="leg-dot" style="background:#993C1D"></div>Kursor</div>
+    <div class="leg-item" data-seg="response"><div class="leg-dot" style="background:#555"></div>Odpowiedź</div>
+  </div>
+
+  <div class="info-box" id="info-box"></div>
+</div>
+
+<script>
+const TOTAL = 64000;
+
+const scenarios = {
+  small:  { system: 3200, files: 800,   history: 400,  cursor: 300,  response: 4096 },
+  medium: { system: 3200, files: 8000,  history: 3000, cursor: 1200, response: 4096 },
+  large:  { system: 3200, files: 22000, history: 8000, cursor: 3000, response: 4096 },
+  full:   { system: 3200, files: 38000, history: 12000,cursor: 4000, response: 4096 },
+};
+
+const info = {
+  system: `<strong>System prompt</strong> — Copilot wstrzykuje go automatycznie przy każdym zapytaniu. Zawiera instrukcje modelu, wersję VS Code, język programowania i zasady bezpieczeństwa. Zwykle <strong>~3 000–4 000 tokenów</strong>, niezależnie od projektu.`,
+  files:  `<strong>Otwarte pliki / @workspace</strong> — Copilot dołącza zawartość aktualnie otwartych zakładek oraz pliki wskazane przez <code>@workspace</code>. To <strong>największy konsument</strong> kontekstu: duży plik TypeScript może mieć 10 000+ tokenów. Copilot przycina pliki od dołu, gdy brakuje miejsca.`,
+  history:`<strong>Historia czatu</strong> — Poprzednie wiadomości z bieżącej sesji Copilot Chat. Im dłuższa rozmowa, tym mniej miejsca na pliki. Copilot automatycznie usuwa najstarsze wiadomości gdy okno jest pełne (<strong>rolling window</strong>).`,
+  cursor: `<strong>Kursor &amp; aktywny snippet</strong> — Fragment kodu wokół kursora w edytorze (kilka dziesiątek linii) plus ew. zaznaczony tekst. Zawsze trafia do kontekstu — to "gdzie teraz jesteś" w pliku.`,
+  response:`<strong>Zarezerwowane na odpowiedź</strong> — Copilot rezerwuje ~4 000 tokenów na wygenerowaną odpowiedź. Suma: <em>kontekst wejściowy + ta rezerwa ≤ limit okna</em>.`,
+};
+
+let activeScenario = 'small';
+
+function pct(v) { return Math.min((v / TOTAL) * 100, 100).toFixed(2) + '%'; }
+
+function render(id) {
+  const s = scenarios[id];
+  const used = s.system + s.files + s.history + s.cursor + s.response;
+  const free = Math.max(TOTAL - used, 0);
+
+  document.getElementById('s-system').style.width  = pct(s.system);
+  document.getElementById('s-files').style.width   = pct(s.files);
+  document.getElementById('s-history').style.width = pct(s.history);
+  document.getElementById('s-cursor').style.width  = pct(s.cursor);
+  document.getElementById('s-response').style.width= pct(s.response);
+  document.getElementById('s-free').style.width    = pct(free);
+
+  document.getElementById('s-files').textContent   = s.files > 2000 ? '@workspace' : '';
+  document.getElementById('s-history').textContent = s.history > 2000 ? 'Historia' : '';
+
+  const pUsed = Math.round((used / TOTAL) * 100);
+  document.getElementById('tokens-label').textContent =
+    used.toLocaleString('pl-PL') + ' / ' + TOTAL.toLocaleString('pl-PL') + ' tokenów  (' + pUsed + '% zajęte)';
+}
+
+document.getElementById('scenarios').addEventListener('click', e => {
+  const btn = e.target.closest('[data-id]');
+  if (!btn) return;
+  activeScenario = btn.dataset.id;
+  document.querySelectorAll('.sc-btn').forEach(b => b.classList.toggle('active', b === btn));
+  render(activeScenario);
+});
+
+document.querySelectorAll('.leg-item').forEach(el => {
+  el.addEventListener('click', () => {
+    const key = el.dataset.seg;
+    document.getElementById('info-box').innerHTML = info[key];
+  });
+});
+
+render('small');
+document.getElementById('info-box').innerHTML = info['system'];
+</script>
