@@ -302,7 +302,7 @@
         <td>1x</td>
         <td>77.2%</td>
         <td>128k+</td>
-        <td>Najwyższy benchmark, ale drogi</td>
+        <td>Pisanie kodu, debugowanie.</td>
       </tr>
       <tr>
         <td>Gemini 3.1 Pro</td>
@@ -327,7 +327,7 @@
       </tr>
     </tbody>
   </table>
-  <small>Anthropic, OpenAI, Google - marzec 2026. Ceny relatywne per 1M tokenów (input).</small>
+  <small>Anthropic, OpenAI, Google - kwiecień 2026.</small>
   <div style="font-size:0.44em; margin-top:6px; color:var(--allegro-gray); line-height:1.5;">
     🔗 Rekomendacje Allegro: <a href="https://copilot.gh.allegrogroup.com/recommendations/" style="color:var(--allegro-orange);">copilot.gh.allegrogroup.com/recommendations</a><br>
     🔗 Benchmarki modeli: <a href="https://benchlm.ai/benchmarks/sweVerified" style="color:var(--allegro-orange);">benchlm.ai/benchmarks/sweVerified</a>
@@ -353,11 +353,11 @@
       <p style="font-size:0.65em; opacity:0.8">🚗 Samochód</p>
       <ul class="compact">
         <li>Codzienny coding</li>
-        <li>Agenty i skille</li>
+        <li>Agenci i skille</li>
         <li>Multi-file edycja</li>
         <li>Analiza danych</li>
       </ul>
-      <div style="margin-top:14px; font-size:0.6em; color: var(--allegro-orange)">1M tokenów · 1x $</div>
+      <div style="margin-top:14px; font-size:0.6em; color: var(--allegro-orange)">200k tokenów · 1x $</div>
     </div>
     <div class="card">
       <h3>Opus 4.6</h3>
@@ -420,7 +420,7 @@
       <span style="font-size:0.42em">GPT<br>5.4</span>
     </div>
 
-    <!-- Claude Sonnet 4.6 - 200k, 79.6% — RECOMMENDED -->
+    <!-- Claude Sonnet 4.6 - 200k, 79.6% - RECOMMENDED -->
     <div class="bubble fragment" style="width:68px; height:68px; left:14%; bottom:68%; background:rgba(255,90,0,0.35); border:3px solid var(--allegro-orange);">
       <span style="font-size:0.42em">★ Sonnet<br>4.6</span>
     </div>
@@ -441,45 +441,52 @@
   </div>
 </section>
 
-<!-- Slide 6 - Browser vs Copilot -->
+<!-- Slide 6 - Ways to use AI -->
 <section>
-  <h2>Claude w przeglądarce vs GitHub Copilot</h2>
-  <div class="two-col with-divider">
-    <div>
-      <h3 style="color: var(--allegro-gray)">claude.ai</h3>
-      <ul class="compact">
-        <li>✓ Dokumentacja</li>
-        <li>✓ Brainstorming</li>
-        <li>✓ Pisanie maili</li>
-        <li>✓ Planowanie</li>
-      </ul>
-      <div class="warning" style="margin-top:14px;">
-        ⚠️ <strong>ŻADNYCH DANYCH FIRMOWYCH!</strong><br>
-        Żadnych CSV, SQL z danymi, source code
-      </div>
+  <h2>Sposoby korzystania z AI</h2>
+  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 8px;">
+
+    <!-- VS Code - highlighted -->
+    <div style="display: grid; grid-template-columns: 160px 1fr auto; gap: 16px; align-items: center; background: #FFF5EE; border: 2px solid var(--allegro-orange); border-radius: 12px; padding: 12px 18px;">
+      <div style="font-size: 0.62em; font-weight: 700; color: var(--allegro-orange);">🖥️ IDE (VS Code)<br><span style="font-weight: 400; color: var(--allegro-gray);">GitHub Copilot</span></div>
+      <div style="font-size: 0.58em; color: var(--text-secondary);">AI wbudowane w edytor - widzi Twoje pliki, projekt i historię; obsługuje agentów, MCP i wielokrokowe zadania bez opuszczania IDE.</div>
+      <div style="font-size: 0.55em; font-weight: 700; color: var(--allegro-teal); white-space: nowrap;">✅ Preferowany<br>dla Allegro</div>
     </div>
-    <div>
-      <h3 style="color: var(--allegro-teal)">VS Code + Copilot</h3>
-      <ul class="compact">
-        <li>✓ Kodowanie</li>
-        <li>✓ Praca z wieloma plikami</li>
-        <li>✓ SQL + BigQuery</li>
-        <li>✓ Twoje skille i agenty</li>
-        <li>✓ Omnidoc MCP</li>
-      </ul>
-      <div class="info" style="margin-top:14px;">
-        ✅ Zatwierdzony przez Security Allegro
-      </div>
+
+    <!-- Browser -->
+    <div style="display: grid; grid-template-columns: 160px 1fr auto; gap: 16px; align-items: center; background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 12px; padding: 12px 18px;">
+      <div style="font-size: 0.62em; font-weight: 700; color: var(--text-primary);">🌐 Przeglądarka<br><span style="font-weight: 400; color: var(--allegro-gray);">claude.ai · chatgpt.com</span></div>
+      <div style="font-size: 0.58em; color: var(--text-secondary);">Czat bez instalacji, idealny do brainstormingu, pisania maili i planowania - nie wymaga konta firmowego ani konfiguracji.</div>
+      <div style="font-size: 0.55em; font-weight: 700; color: var(--allegro-red); white-space: nowrap;">⚠️ Bez danych<br>firmowych!</div>
     </div>
-  </div>
-  <div class="tip fragment" style="margin-top: 16px; text-align:center;">
-    💡 <strong>Zasada:</strong> dane firmowe → tylko Copilot. Myślenie i tekst → Claude lub Copilot.
+
+    <!-- CLI -->
+    <div style="display: grid; grid-template-columns: 160px 1fr auto; gap: 16px; align-items: center; background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 12px; padding: 12px 18px;">
+      <div style="font-size: 0.62em; font-weight: 700; color: var(--text-primary);">⌨️ CLI / Terminal<br><span style="font-weight: 400; color: var(--allegro-gray);">Claude Code</span></div>
+      <div style="font-size: 0.58em; color: var(--text-secondary);">Agent działa w terminalu - samodzielnie czyta i pisze pliki, uruchamia testy i pracuje w pętli bez interakcji użytkownika.</div>
+      <div style="font-size: 0.55em; color: var(--allegro-gray); white-space: nowrap;">Zaawansowane<br>użycie</div>
+    </div>
+
+    <!-- API -->
+    <div style="display: grid; grid-template-columns: 160px 1fr auto; gap: 16px; align-items: center; background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 12px; padding: 12px 18px;">
+      <div style="font-size: 0.62em; font-weight: 700; color: var(--text-primary);">🔌 API<br><span style="font-weight: 400; color: var(--allegro-gray);">Anthropic · OpenAI</span></div>
+      <div style="font-size: 0.58em; color: var(--text-secondary);">Bezpośrednia integracja z Pythonem lub aplikacją - pozwala wbudować AI w własny pipeline, skrypt Airflow lub raport automatyczny.</div>
+      <div style="font-size: 0.55em; color: var(--allegro-gray); white-space: nowrap;">Programistyczne<br>użycie</div>
+    </div>
+
+    <!-- Other -->
+    <div style="display: grid; grid-template-columns: 160px 1fr auto; gap: 16px; align-items: center; background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 12px; padding: 12px 18px;">
+      <div style="font-size: 0.62em; font-weight: 700; color: var(--text-primary);">📱 Inne<br><span style="font-weight: 400; color: var(--allegro-gray);">mobile · Docs · Slack</span></div>
+      <div style="font-size: 0.58em; color: var(--text-secondary);">Wtyczki do Google Docs, Slack, Notion lub aplikacje mobilne - AI tam, gdzie już pracujesz, bez zmiany narzędzia.</div>
+      <div style="font-size: 0.55em; color: var(--allegro-gray); white-space: nowrap;">Kontekst<br>ogólny</div>
+    </div>
+
   </div>
 </section>
 
 <!-- Slide 6a - Glossary part 1 -->
 <section>
-  <h2>📖 Słowniczek pojęć <span class="gray" style="font-size:0.5em">(1/2)</span></h2>
+  <h2>📖 Słowniczek pojęć</h2>
   <div class="two-col" style="gap: 32px;">
     <div>
       <h3>AI i modele</h3>
@@ -487,27 +494,13 @@
         <p><strong class="orange">LLM</strong> - duży model językowy (Claude, GPT, Gemini)</p>
         <p><strong class="orange">Token</strong> - jednostka tekstu; 1 słowo ≈ 1 token; polskie: 2–3</p>
         <p><strong class="orange">Context window</strong> - pamięć RAM modelu; instrukcje, pliki, tools, pamięć.</p>
-        <p><strong class="orange">SWE-bench</strong> - benchmark: % prawdziwych bugów naprawionych przez AI</p>
         <p><strong class="orange">Halucynacja</strong> - AI brzmi pewnie, ale kłamie (np. wymyśla tabelę BQ)</p>
-      </div>
-    </div>
-    <div>
-      <h3>Techniki pracy</h3>
-      <div style="font-size:0.56em; line-height:1.65;">
         <p><strong class="orange">Vibe coding</strong> - opisujesz cel w języku naturalnym, AI pisze kod</p>
+        <p><strong class="orange">Agentic workflow</strong> - wieloetapowy proces zarządzany przez AI</p>
         <p><strong class="orange">Prompt</strong> - polecenie do AI; proste lub złożone z kontekstem</p>
-        <p><strong class="orange">Chain of Thought</strong> - „pomyśl krok po kroku" → lepsza jakość</p>
-        <p><strong class="orange">Refaktoryzacja</strong> - upraszczanie kodu bez zmiany działania</p>
         <p><strong class="orange">Prompt injection</strong> - instrukcja ukryta w danych</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Slide 6b - Glossary part 2 -->
-<section>
-  <h2>📖 Słowniczek pojęć <span class="gray" style="font-size:0.5em">(2/2)</span></h2>
-  <div class="two-col" style="gap: 32px;">
     <div>
       <h3>Narzędzia</h3>
       <div style="font-size:0.56em; line-height:1.65;">
@@ -515,15 +508,9 @@
         <p><strong class="orange">GitHub Copilot</strong> - asystent AI w VS Code</p>
         <p><strong class="orange">MCP</strong> - standard łączący AI z zewnętrznymi źródłami wiedzy</p>
         <p><strong class="orange">Omnidoc MCP</strong> - dokumentacja wewnętrzna Allegro przez MCP</p>
-      </div>
-    </div>
-    <div>
-      <h3>Personalizacja AI</h3>
-      <div style="font-size:0.56em; line-height:1.65;">
-        <p><strong class="orange">Instructions</strong> - stałe reguły AI, ładowane automatycznie<br><span class="gray">(np. „używaj kolorów Allegro", „filtruj po partycji")</span></p>
-        <p><strong class="orange">Prompt / Tool</strong> - polecenie wywoływane przez /nazwa<br><span class="gray">(plik .prompt.md - jednorazowy workflow)</span></p>
-        <p><strong class="orange">Agent</strong> - AI z tożsamością, narzędziami i wielokrokowym workflow<br><span class="gray">(plik .agent.md - np. ds-analyst, code-reviewer)</span></p>
-        <p><strong class="orange">Chatmode</strong> - tryb czatu przejmujący całą rozmowę<br><span class="gray">(plik .chatmode.md - np. tryb code review)</span></p>
+        <p><strong class="orange">CLI</strong> - Command Line Interface; interfejs wiersza poleceń</p>
+        <p><strong class="orange">API</strong> - Application Programming Interface; sposób komunikacji z modelem</p>
+        <p><strong class="orange">IDE</strong> - Integrated Development Environment; zintegrowane środowisko programistyczne</p>
       </div>
     </div>
   </div>
@@ -656,7 +643,7 @@
     </div>
   </div>
   <div class="tip fragment" style="margin-top: 14px; text-align:center;">
-    💡 Dzięki MCP Copilot <strong>nie halucynuje</strong> - sprawdza w źródle zamiast zgadywać.
+    💡 Dzięki MCP Copilot może odnosić się do wewnętrznych, firmowych standardów.
   </div>
 </section>
 
@@ -695,11 +682,9 @@
   <div class="three-col" style="gap: 14px;">
     <div class="card" style="padding:12px;">
       <h3 style="font-size:1em; margin-bottom:0.15em;">@ Uczestnicy</h3>
-      <p style="font-size:0.48em; color:var(--allegro-gray); margin-bottom:3px;">Kogo pytasz</p>
+      <p style="font-size:0.3em; color:var(--allegro-gray); margin-bottom:3px;">Obecnie mniej używani na rzecz agentów.</p>
       <div style="font-size:0.5em; line-height:1.5;">
-        <p style="margin:2px 0;"><strong>@workspace</strong> - cały projekt</p>
         <p style="margin:2px 0;"><strong>@vscode</strong> - konfiguracja edytora</p>
-        <p style="margin:2px 0;"><strong>@github</strong> - issues, PR, repo</p>
         <p style="margin:2px 0;"><strong>@terminal</strong> - komendy terminala</p>
       </div>
     </div>
@@ -707,11 +692,11 @@
       <h3 style="font-size:1em; margin-bottom:0.15em;"># Kontekst</h3>
       <p style="font-size:0.48em; color:var(--allegro-gray); margin-bottom:3px;">Co mu dajesz</p>
       <div style="font-size:0.5em; line-height:1.5;">
-        <p style="margin:2px 0;"><strong>#file</strong> - konkretny plik</p>
-        <p style="margin:2px 0;"><strong>#codebase</strong> - semantyczne szukanie</p>
+        <p style="margin:2px 0;"><strong>file:nazwa.py</strong> - konkretny plik</p>
+        <p style="margin:2px 0;"><strong>#codebase</strong> - zapytania o całe repo</p>
         <p style="margin:2px 0;"><strong>#fetch &lt;url&gt;</strong> - pobierz ze strony</p>
-        <p style="margin:2px 0;"><strong>#terminalSelection</strong> - output</p>
-        <p style="margin:2px 0;"><strong>#githubRepo</strong> - inne repo</p>
+        <p style="margin:2px 0;"><strong>#terminalSelection</strong> - output z terminala</p>
+        <p style="margin:2px 0;"><strong>#web</strong> - ogólne wyszukiwanie w Internecie</p>
       </div>
     </div>
     <div class="card" style="padding:12px;">
@@ -725,31 +710,32 @@
         <p style="margin:2px 0;"><strong>/init</strong> - konfiguruj AI</p>
         <p style="margin:2px 0;"><strong>/compact</strong> - skompaktuj historię</p>
         <p style="margin:2px 0;"><strong>/clear</strong> - nowa rozmowa</p>
+        <p style="margin:2px 0;"><strong>/troubleshoot</strong> - sprawdzanie rozumowania agenta</p>
       </div>
     </div>
   </div>
   <div class="tip" style="margin-top: 10px; text-align:center; font-size:0.56em; padding:10px 14px;">
-    💡 <code style="background:rgba(0,0,0,0.04); padding:2px 6px; border-radius:4px;">@workspace opisz mi ten projekt</code> - najbardziej przydatna komenda na start. Copilot przeczyta cały repo i powie co tam jest.
+    💡 <code style="background:rgba(0,0,0,0.04); padding:2px 6px; border-radius:4px;">/init</code> - bardzo przydatna komenda na start. Copilot przeczyta cały repo i wygeneruje copilot-instructions.md.
   </div>
 </section>
 
-<!-- Slide 14 - 3 modes: Ask / Plan / Agent -->
+<!-- Slide 14a - 3 modes: Ask / Plan / Agent -->
 <section>
   <h2 style="margin-bottom:0.3em;">3 tryby pracy z Copilot</h2>
-  <p style="font-size:0.55em; color:var(--allegro-gray); margin-bottom:10px;">Ctrl+Alt+I → panel chatu → wybierz tryb na górze</p>
+  <p style="font-size:0.55em; color:var(--allegro-gray); margin-bottom:10px;">Ctrl+Alt+I</p>
   <div class="three-col" style="gap: 16px;">
     <div class="card fragment" style="padding:12px;">
       <h3 style="color: var(--allegro-gray); margin-bottom:0.2em;">💬 Ask</h3>
       <p style="font-size:0.55em; line-height:1.4;">Klasyczny czat. Pytasz, odpowiada. <strong>Nie dotyka plików.</strong></p>
       <div style="font-size:0.52em; color:#999; margin-top:6px; line-height:1.4;">
-        → Nauka<br>→ Planowanie<br>→ „Jak działa ta funkcja?"
+        → Nauka<br>→ Proste pytania<br>→ „Jak działa ta funkcja?"
       </div>
     </div>
     <div class="card highlight fragment" style="padding:12px;">
       <h3 style="margin-bottom:0.2em;">📋 Plan</h3>
-      <p style="font-size:0.55em; line-height:1.4;">Planuje ZANIM napisze. Pokazuje plan, <strong>pyta o zgodę.</strong></p>
+      <p style="font-size:0.55em; line-height:1.4;">Planuje ZANIM napisze. Pokazuje plan, przeszukuje repo i/lub Internet.</p>
       <div style="font-size:0.52em; color:#999; margin-top:6px; line-height:1.4;">
-        → Duże zadania (&gt;15 min)<br>→ Złożone analizy<br>→ Refaktoryzacja
+        → Duże zadania<br>→ Planowanie przed implementacją<br>→ Refaktoryzacja
       </div>
     </div>
     <div class="card fragment" style="border-color: var(--allegro-red); padding:12px;">
@@ -766,7 +752,63 @@
     </div>
   </div>
   <div class="info" style="margin-top:8px; font-size:0.5em; padding:8px 14px; text-align:center;">
-    💡 Autouzupełnianie (inline) — pojawia się podczas pisania kodu. Tab = akceptuj, Esc = odrzuć. Nie wlicza się do limitu requestów.
+    💡 Autouzupełnianie (inline) - pojawia się podczas pisania kodu. Tab = akceptuj, Esc = odrzuć. Nie wlicza się do limitu requestów.
+  </div>
+</section>
+
+<!-- Slide 14b - Agent permissions & thinking effort -->
+<section>
+  <h2 style="margin-bottom:0.4em;">Sterowanie agentem - uprawnienia i myślenie</h2>
+  <div style="display:flex; flex-direction:column; gap:10px;">
+
+    <!-- Agent permissions -->
+    <div>
+      <h3 style="font-size:0.8em; margin-bottom:6px;">🔐 Agent permissions <span class="gray" style="font-weight:400; font-size:0.85em;">- ikona pod okienkiem chatu</span></h3>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px;">
+        <div class="card" style="padding:10px 14px; text-align:center;">
+          <div style="font-size:0.6em; font-weight:700; color:var(--text-primary); margin-bottom:4px;">Default Approvals</div>
+          <div style="font-size:0.53em; color:var(--text-secondary); line-height:1.4;">Agent pyta o zgodę przed każdą akcją z efektami ubocznymi (edycja pliku, terminal)</div>
+        </div>
+        <div class="card" style="padding:10px 14px; text-align:center; border-color:rgba(255,90,0,0.35);">
+          <div style="font-size:0.6em; font-weight:700; color:var(--allegro-orange); margin-bottom:4px;">Bypass Approvals</div>
+          <div style="font-size:0.53em; color:var(--text-secondary); line-height:1.4;">Agent auto-zatwierdza tool calle, ale nadal może zadawać pytania użytkownikowi</div>
+        </div>
+        <div class="card" style="padding:10px 14px; text-align:center; border-color:rgba(224,33,27,0.3);">
+          <div style="font-size:0.6em; font-weight:700; color:var(--allegro-red); margin-bottom:4px;">Autopilot ⚡</div>
+          <div style="font-size:0.53em; color:var(--text-secondary); line-height:1.4;">Pełna autonomia - auto-zatwierdza wszystko, odpowiada sam na pytania, powtarza przy błędach</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- /yolo -->
+    <div class="card" style="padding:10px 16px; display:flex; gap:14px; align-items:center;">
+      <div style="font-size:0.65em; flex-shrink:0;">⌨️</div>
+      <div style="font-size:0.55em; line-height:1.5;">
+        <strong class="orange">/yolo</strong> lub <strong class="orange">/autoApprove</strong> - włącza globalne auto-zatwierdzanie tool calli (równoważne Bypass Approvals, w każdej chwili)<br>
+        <strong class="orange">/disableYolo</strong> lub <strong class="orange">/disableAutoApprove</strong> - wyłącza
+      </div>
+    </div>
+
+    <!-- Thinking effort -->
+    <div>
+      <h3 style="font-size:0.8em; margin-bottom:6px;">🧠 Thinking effort <span class="gray" style="font-weight:400; font-size:0.85em;">- w model pickerze (kliknij strzałkę obok nazwy modelu)</span></h3>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px;">
+        <div class="card" style="padding:10px 14px; text-align:center;">
+          <div style="font-size:0.6em; font-weight:700; color:var(--allegro-teal); margin-bottom:4px;">Low</div>
+          <div style="font-size:0.53em; color:var(--text-secondary); line-height:1.4;">Szybka odpowiedź, mniej tokenów - dobre do prostych pytań i rutynowego kodu</div>
+        </div>
+        <div class="card" style="padding:10px 14px; text-align:center; border-color:rgba(255,90,0,0.35);">
+          <div style="font-size:0.6em; font-weight:700; color:var(--allegro-orange); margin-bottom:4px;">Medium</div>
+          <div style="font-size:0.53em; color:var(--text-secondary); line-height:1.4;">Domyślne ustawienie - balans między jakością a szybkością</div>
+        </div>
+        <div class="card" style="padding:10px 14px; text-align:center; border-color:rgba(5,23,116,0.3);">
+          <div style="font-size:0.6em; font-weight:700; color:var(--allegro-navy); margin-bottom:4px;">High</div>
+          <div style="font-size:0.53em; color:var(--text-secondary); line-height:1.4;">Głębsze reasoning, więcej latency - dla trudnych algorytmów, debugowania, architektury</div>
+        </div>
+      </div>
+      <p style="font-size:0.5em; color:var(--allegro-gray); margin-top:6px;">Dostępne dla modeli reasoning: Claude Sonnet 4.6, GPT-5.4. Thinking tokens wliczają się do context window, ale nie są widoczne w odpowiedzi.</p>
+    </div>
+
   </div>
 </section>
 
@@ -798,6 +840,8 @@
     </div>
   </div>
 </section>
+
+
 
 <!-- Slide 16 - Security config -->
 <section>
@@ -924,32 +968,32 @@
   <div style="display:flex; flex-direction:column; gap:0; max-width:720px; margin:0 auto;">
     <div style="background:rgba(224,33,27,0.08); border:1px solid rgba(224,33,27,0.25); border-radius:8px 8px 0 0; padding:6px 14px;">
       <div style="font-size:0.5em; line-height:1.3;">
-        <strong>🔴 Odpowiedź Copilota (output)</strong> <span style="color:#999;">— tokens wyjściowe</span>
+        <strong>🔴 Odpowiedź Copilota (output)</strong> <span style="color:#999;">- tokens wyjściowe</span>
       </div>
     </div>
     <div style="background:rgba(255,90,0,0.08); border:1px solid rgba(255,90,0,0.2); border-top:none; padding:6px 14px;">
       <div style="font-size:0.5em; line-height:1.3;">
-        <strong>🟠 Historia rozmowy</strong> <span style="color:#999;">— pytania + odpowiedzi z tego chatu</span>
+        <strong>🟠 Historia rozmowy</strong> <span style="color:#999;">- pytania + odpowiedzi z tego chatu</span>
       </div>
     </div>
     <div style="background:rgba(255,200,0,0.08); border:1px solid rgba(255,200,0,0.25); border-top:none; padding:6px 14px;">
       <div style="font-size:0.5em; line-height:1.3;">
-        <strong>🟡 Pliki z kontekstu</strong> <span style="color:#999;">— #file, @workspace, otwarte taby</span>
+        <strong>🟡 Pliki z kontekstu</strong> <span style="color:#999;">- #file, @workspace, otwarte taby</span>
       </div>
     </div>
     <div style="background:rgba(20,67,147,0.1); border:1px solid rgba(20,67,147,0.2); border-top:none; padding:6px 14px;">
       <div style="font-size:0.5em; line-height:1.3;">
-        <strong>🔵 Instructions (automatyczne)</strong> <span style="color:#999;">— copilot-instructions.md, *.instructions.md</span>
+        <strong>🔵 Instructions (automatyczne)</strong> <span style="color:#999;">- copilot-instructions.md, *.instructions.md</span>
       </div>
     </div>
     <div style="background:rgba(98,86,177,0.08); border:1px solid rgba(98,86,177,0.2); border-top:none; border-radius:0 0 8px 8px; padding:6px 14px;">
       <div style="font-size:0.5em; line-height:1.3;">
-        <strong>🟣 System prompt (Copilot)</strong> <span style="color:#999;">— wewnętrzne instrukcje GitHub</span>
+        <strong>🟣 System prompt (Copilot)</strong> <span style="color:#999;">- wewnętrzne instrukcje GitHub</span>
       </div>
     </div>
   </div>
   <div class="warning" style="font-size:0.46em; padding:5px 12px; margin-top:6px;">
-    ⚠️ Im więcej inputu, tym mniej miejsca na odpowiedź. <code style="background:rgba(0,0,0,0.04); padding:1px 4px; border-radius:3px;">applyTo: "**"</code> ładuje się do KAŻDEJ rozmowy!
+    ⚠️ Im więcej inputu, tym mniej miejsca na odpowiedź.
   </div>
   <div style="margin-top:8px; border:1px solid #e0e0e0; border-radius:8px; overflow:hidden; max-width:720px; margin-left:auto; margin-right:auto;">
     <iframe src="github_copilot_context_window.html" style="width:100%; height:260px; border:none;"></iframe>
@@ -1004,6 +1048,68 @@
   </div>
   <div class="tip" style="margin-top:10px; font-size:0.54em; padding:10px 14px; text-align:center;">
     💡 Najlepsza odpowiedź = precyzyjny kontekst + krótka historia + jasne wymagania
+  </div>
+</section>
+
+<!-- Slide 21b - Memory -->
+<section>
+  <h3 style="margin-bottom:0.2em;">🧠 Pamięć Copilota - co pamiętasz między sesjami?</h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin-bottom:8px;">
+
+    <div class="card" style="padding:10px 14px; border-color:rgba(255,90,0,0.4);">
+      <h3 style="font-size:0.9em; margin-bottom:4px; color:var(--allegro-orange);">👤 User memory</h3>
+      <div style="font-size:0.54em; line-height:1.45; color:var(--text-secondary);">
+        Twoje preferencje globalne - działa we <strong>wszystkich projektach</strong>.<br>
+        <span class="gray">Np. "preferuję komentarze po polsku", "używaj polars zamiast pandas"</span><br>
+        📁 <code>/memories/</code> - pierwsze 200 linii ładuje się <strong>automatycznie</strong>.
+      </div>
+    </div>
+
+    <div class="card" style="padding:10px 14px; border-color:rgba(5,23,116,0.3);">
+      <h3 style="font-size:0.9em; margin-bottom:4px; color:var(--allegro-navy);">📁 Repository memory</h3>
+      <div style="font-size:0.54em; line-height:1.45; color:var(--text-secondary);">
+        Fakty dla projektu - działa <strong>tylko w tym workspace</strong>, persystuje między sesjami.<br>
+        <span class="gray">Np. "testy przez make test", "tu używamy polars", "nie używaj relaxed mocks"</span><br>
+        📁 <code>/memories/repo/</code>
+      </div>
+    </div>
+
+    <div class="card" style="padding:10px 14px; border-color:rgba(0,134,115,0.3);">
+      <h3 style="font-size:0.9em; margin-bottom:4px; color:var(--allegro-teal);">⏱️ Session memory</h3>
+      <div style="font-size:0.54em; line-height:1.45; color:var(--text-secondary);">
+        Tymczasowy kontekst <strong>tylko tej rozmowy</strong> - kasowany po zamknięciu.<br>
+        <span class="gray">Np. tymczasowe decyzje, plan zadania, robocze notatki</span><br>
+        📁 <code>/memories/session/</code>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+
+    <div class="card" style="padding:10px 14px;">
+      <h3 style="font-size:0.9em; margin-bottom:4px;">💬 Jak zapisać?</h3>
+      <div style="font-size:0.54em; line-height:1.5; color:var(--text-secondary);">
+        Po prostu powiedz Copilotowi wprost:<br>
+        <em>"Remember that in this project we use polars"</em><br>
+        <em>"Save to memory: always filter _partitiondate"</em><br>
+        Agent sam zdecyduje do której zakładki (user vs repo). Można też zlecić: "zapisz do sql-memory.md"
+      </div>
+    </div>
+
+    <div class="card" style="padding:10px 14px;">
+      <h3 style="font-size:0.9em; margin-bottom:4px;">⚙️ Jak zarządzać?</h3>
+      <div style="font-size:0.54em; line-height:1.5; color:var(--text-secondary);">
+        <strong>Ctrl+Shift+P →</strong> <code>Chat: Show Memory Files</code> - przeglądanie<br>
+        <strong>Ctrl+Shift+P →</strong> <code>Chat: Clear All Memory Files</code> - czyszczenie<br>
+        <em>"What's in your memory?"</em> - zapytaj co wie
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tip" style="margin-top:8px; font-size:0.54em; padding:8px 14px;">
+    💡 Copilot <strong>nie pamięta treści rozmów</strong> - tylko fakty które mu każesz zapamiętać lub które sam wyciągnie z kodu. Nowa rozmowa zaczyna się od zera - ale z notatnikiem otwartym obok.
   </div>
 </section>
 
@@ -1244,7 +1350,7 @@ SQL z CTE, komentarze po polsku, GROUP BY ALL
           /create-dag<br>
           /sanity-check<br>
           /sql-query-builder<br>
-          mode: agent · tools: [...]
+          agent: agent · tools: [...]
         </div>
       </div>
     </div>
@@ -1260,7 +1366,7 @@ SQL z CTE, komentarze po polsku, GROUP BY ALL
           code-reviewer<br>
           data-discovery<br>
           new-project<br>
-          mode: agent · tools: [...]
+          agent: agent · tools: [...]
         </div>
       </div>
     </div>
@@ -1274,71 +1380,34 @@ SQL z CTE, komentarze po polsku, GROUP BY ALL
   <div class="tip" style="margin-top:6px; font-size:0.48em; padding:8px 14px;">
     💡 Instructions = co AI wie zawsze. Prompt = co robi na Twoje żądanie. Agent = kim jest i co umie.<br>
   </div>
-</section>
-
-<!-- Slide 29 - Plan Mode customization -->
-<section>
-  <h2 style="margin-bottom:0.3em;">Przykład: personalizacja Plan Mode</h2>
-  <div class="two-col with-divider" style="margin-bottom:10px;">
-    <div>
-      <h3 style="color:var(--allegro-gray); font-size:0.95em;">DOMYŚLNY</h3>
-      <ul class="compact" style="font-size:0.58em;">
-        <li>Generyczny plan</li>
-        <li>Nie zna Allegro</li>
-        <li>Nie używa MCP</li>
-        <li>Nie wie o konwencjach</li>
-      </ul>
-    </div>
-    <div>
-      <h3 style="font-size:0.95em;">SPERSONALIZOWANY</h3>
-      <ul class="compact" style="font-size:0.58em;">
-        <li>Plan w kontekście BigQuery + Airflow</li>
-        <li>Sprawdza w Omnidoc</li>
-        <li>Zna konwencje SQL</li>
-        <li>Proponuje testy</li>
-      </ul>
-    </div>
-  </div>
-  <p style="font-size:0.58em; margin-bottom:4px;">Jak? Edytuj <strong class="orange">Plan.agent.md</strong>:</p>
-  <pre style="background:#F0F0F0; border-radius:10px; padding:8px 12px; font-size:0.40em; line-height:1.45; margin:4px 0; border:1px solid #E0E0E0;"><code style="color:#1A1A1A;">---
-mode: agent
-description: "Plan analityczny z kontekstem Allegro"
-tools:
-  - codebase
-  - mcp_omnidoc_omnidoc
-  - fetch
----
-
-Jesteś planistą projektów analitycznych w Allegro.
-Zanim zaproponujesz plan:
-1. Przeczytaj .copilot-project.md (jeśli istnieje)
-2. Sprawdź w Omnidoc standardy dla tego typu danych
-3. Zaproponuj strukturę folderów
-4. Wypisz kroki z checkboxami</code></pre>
-  <div class="tip" style="margin-top:8px; font-size:0.52em; padding:8px 14px; text-align:center;">
-    💡 Każdy tryb (Ask, Plan, Agent) można personalizować przez plik .agent.md
+  <div style="font-size:0.5em; color:var(--allegro-gray);">
+      Kiedyś jeszcze .chatmode.md - obecnie zastąpione w pełni przez agent.md.
   </div>
 </section>
+
+
 
 <!-- Slide 30 - Global vs Local files -->
 <section>
-  <h2 style="margin-bottom:0.3em;">Globalne vs lokalne — gdzie co leży</h2>
+  <h2 style="margin-bottom:0.3em;">Globalne vs lokalne - gdzie co leży</h2>
   <div class="two-col with-divider">
     <div>
       <h3 style="font-size:0.9em; margin-bottom:4px;">🌍 GLOBALNE <span style="font-size:0.7em; color:var(--allegro-gray);">(działają WSZĘDZIE)</span></h3>
       <div class="card" style="padding:10px; font-family:'Consolas','Courier New',monospace; font-size:0.5em; line-height:1.65;">
-        C:\Users\&lt;user&gt;\<br>
-        &nbsp;&nbsp;AppData\Roaming\Code\<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;User\prompts\<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── ds-core<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;.instructions.md<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── sql-catalog<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;.instructions.md<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── allegro_theme.py<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── *.prompt.md<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── *.agent.md
+        &nbsp;~User\prompts\<br>
+        &nbsp;&nbsp;&nbsp;├── ds-core<br>
+        &nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;.instructions.md<br>
+        &nbsp;&nbsp;&nbsp;├── sql-catalog<br>
+        &nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;.instructions.md<br>
+        &nbsp;&nbsp;&nbsp;├── allegro_theme.py<br>
+        &nbsp;&nbsp;&nbsp;├── *.prompt.md<br>
+        &nbsp;&nbsp;&nbsp;└── *.agent.md
       </div>
-      <p style="font-size:0.48em; color:var(--allegro-gray); margin-top:4px;">Lub: ~/.github/prompts/</p>
+      <div style="font-family:'Consolas','Courier New',monospace; font-size:0.46em; color:var(--allegro-gray); margin-top:5px; line-height:1.7;">
+        <strong style="font-family:'Inter','Segoe UI',sans-serif; color:var(--text-secondary);">Windows:</strong> C:\Users\&lt;user&gt;\AppData\Roaming\Code\User\prompts\<br>
+        <strong style="font-family:'Inter','Segoe UI',sans-serif; color:var(--text-secondary);">Mac:</strong> ~/Library/Application Support/Code/User/prompts/<br>
+        <strong style="font-family:'Inter','Segoe UI',sans-serif; color:var(--text-secondary);">Też działa:</strong> ~/.github/prompts/
+      </div>
     </div>
     <div>
       <h3 style="font-size:0.9em; margin-bottom:4px;">📁 LOKALNE <span style="font-size:0.7em; color:var(--allegro-gray);">(tylko w tym folderze)</span></h3>
@@ -1365,6 +1434,171 @@ Zanim zaproponujesz plan:
     <div class="warning" style="flex:1; font-size:0.48em; padding:8px 12px; margin:0;">
       ⚠️ Prompt stack: System Prompt → Instructions (globalne + lokalne) → Pliki kontekstu → Historia → Output
     </div>
+  </div>
+</section>
+
+<!-- Slide 29 - Plan.agent.md anatomy -->
+<section>
+  <h2 style="margin-bottom:0.15em; font-size:1.4em;">Anatomia pliku .agent.md - na przykładzie Plan</h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; font-size:0.9em;">
+
+    <!-- left: YAML -->
+    <div style="display:flex; flex-direction:column; gap:5px;">
+      <div class="card" style="padding:5px 9px;">
+        <h3 style="font-size:0.68em; margin-bottom:2px;">📛 Identyfikacja</h3>
+        <pre style="font-size:0.38em; line-height:1.35; margin:0; background:none; border:none; padding:0; overflow:hidden;"><code>name: Plan
+description: Researches and outlines multi-step plans
+argument-hint: Outline the goal or problem...</code></pre>
+        <div style="font-size:0.42em; color:var(--text-secondary); margin-top:3px; line-height:1.4;">
+          <strong class="orange">name</strong> - ID agenta · <strong class="orange">description</strong> - widoczny w dropdown przy wyborze · <strong class="orange">argument-hint</strong> - podpowiedź na szaro w oknie czatu
+        </div>
+      </div>
+
+      <div class="card" style="padding:5px 9px;">
+        <h3 style="font-size:0.68em; margin-bottom:2px;">🔧 Narzędzia i subagenci</h3>
+        <pre style="font-size:0.38em; line-height:1.35; margin:0; background:none; border:none; padding:0; overflow:hidden;"><code>tools: ['search', 'read', 'web', 'vscode/memory',
+  'vscode/askQuestions', 'agent', ...]
+agents: ['Explore']</code></pre>
+        <div style="font-size:0.42em; color:var(--text-secondary); margin-top:3px; line-height:1.4;">
+          <strong class="orange">tools</strong> - tylko te narzędzia są dostępne · <strong class="orange">agents</strong> - subagenci do wywołania; mogą mieć własne narzędzia, workflow i handoffy
+        </div>
+      </div>
+
+      <div class="card" style="padding:5px 9px;">
+        <h3 style="font-size:0.68em; margin-bottom:2px;">🚦 Zachowanie</h3>
+        <pre style="font-size:0.38em; line-height:1.35; margin:0; background:none; border:none; padding:0; overflow:hidden;"><code>target: vscode
+disable-model-invocation: true</code></pre>
+        <div style="font-size:0.42em; color:var(--text-secondary); margin-top:3px; line-height:1.4;">
+          <strong class="orange">target</strong> - platforma (vscode/github/all) · <strong class="orange">disable-model-invocation</strong> - agent nie uruchomi się automatycznie, tylko na żądanie usera
+        </div>
+      </div>
+    </div>
+
+    <!-- right: handoffs + body -->
+    <div style="display:flex; flex-direction:column; gap:5px;">
+      <div class="card" style="padding:5px 9px; border-color:rgba(0,134,115,0.35);">
+        <h3 style="font-size:0.68em; margin-bottom:2px; color:var(--allegro-teal);">🔀 Handoffs - przyciski po zakończeniu</h3>
+        <pre style="font-size:0.38em; line-height:1.35; margin:0; background:none; border:none; padding:0; overflow:hidden;"><code>handoffs:
+  - label: Start Implementation
+    agent: agent
+    prompt: 'Start implementation'
+    send: true          # auto-submit
+  - label: Open in Editor
+    send: true
+    showContinueOn: false</code></pre>
+        <div style="font-size:0.42em; color:var(--text-secondary); margin-top:3px; line-height:1.4;">
+          Po zakończeniu planu user dostaje <strong>button</strong> zamiast ciągłości czatu.<br>
+          <strong class="orange">send: true</strong> = auto-submit · <strong class="orange">send: false</strong> = user edytuje prompt przed wysłaniem
+        </div>
+      </div>
+
+      <div class="card" style="padding:5px 9px; border-color:rgba(5,23,116,0.25);">
+        <h3 style="font-size:0.68em; margin-bottom:2px; color:var(--allegro-navy);">📝 Treść agenta (poniżej YAML)</h3>
+        <div style="font-size:0.42em; color:var(--text-secondary); line-height:1.4;">
+          <strong class="orange">&lt;rules&gt;</strong> - czego agent <em>nigdy</em> nie robi (tu: nie edytuje plików)<br>
+          <strong class="orange">&lt;workflow&gt;</strong> - fazy: Discovery → Alignment → Design → Refinement<br>
+          <strong class="orange">&lt;plan_style_guide&gt;</strong> - szablon outputu<br>
+          Plan zapisuje się do <code>/memories/session/plan.md</code>
+        </div>
+      </div>
+
+      <div class="tip" style="font-size:0.42em; padding:5px 9px;">
+        💡 Skopiuj → zmień <code>tools</code>, dodaj <code>mcp_omnidoc_omnidoc</code>, dopisz kontekst BQ/Airflow → zapisz do <code>User\prompts\</code>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Slide 30 - Tools -->
+<section>
+  <h2 style="margin-bottom:0.15em; font-size:1.4em;">Tools - czym są i jak działają</h2>
+  <div style="display:grid; grid-template-columns:0.85fr 1.3fr 0.9fr; gap:7px;">
+
+    <!-- col 1: typy + jak działają -->
+    <div style="display:flex; flex-direction:column; gap:6px;">
+      <div class="card" style="padding:5px 9px;">
+        <h3 style="font-size:0.65em; margin-bottom:3px;">🔩 Typy narzędzi</h3>
+        <table style="font-size:0.38em; width:100%; border-collapse:collapse; line-height:1.4;">
+          <tbody>
+            <tr style="border-bottom:1px solid #eee;"><td style="padding:2px 3px;"><strong>Built-in</strong></td><td style="padding:2px 3px; color:var(--text-secondary);">pliki, terminal, search, nawigacja</td></tr>
+            <tr style="border-bottom:1px solid #eee;"><td style="padding:2px 3px;"><strong>MCP tools</strong></td><td style="padding:2px 3px; color:var(--text-secondary);">zewnętrzne API, bazy, cloud</td></tr>
+            <tr><td style="padding:2px 3px;"><strong>Extension</strong></td><td style="padding:2px 3px; color:var(--text-secondary);">narzędzia z rozszerzeń VS Code</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card" style="padding:5px 9px;">
+        <h3 style="font-size:0.65em; margin-bottom:3px;">⚙️ Jak działają</h3>
+        <div style="font-size:0.38em; color:var(--text-secondary); line-height:1.5;">
+          Model → wybiera tool → VS Code wykonuje → wynik wraca do modelu<br><br>
+          <code>#tool-name</code> - explicit ref w prompcie<br>
+          <strong class="orange">Mniej tools = mniej tool calls = mniejszy context</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- col 2: built-in tools -->
+    <div class="card" style="padding:5px 9px;">
+      <h3 style="font-size:0.65em; margin-bottom:4px;">🔑 Najczęstsze built-in tools</h3>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:3px 8px; font-size:0.36em; color:var(--text-secondary); line-height:1.5;">
+        <div>
+          <strong style="color:var(--allegro-orange);">search/</strong><br>
+          <code>codebase</code><br>
+          <code>usages</code> - find refs<br>
+          <code>fileSearch</code><br>
+          <code>textSearch</code><br>
+          <code>listDirectory</code><br>
+          <code>changes</code> - git diff
+        </div>
+        <div>
+          <strong style="color:var(--allegro-orange);">read/ · edit/</strong><br>
+          <code>read/readFile</code><br>
+          <code>read/problems</code><br>
+          <code>read/terminalLastCommand</code><br>
+          <code>edit/editFiles</code><br>
+          <code>edit/createFile</code><br>
+          <code>edit/createDirectory</code>
+        </div>
+        <div>
+          <strong style="color:var(--allegro-orange);">execute/ · inne</strong><br>
+          <code>execute/runInTerminal</code><br>
+          <code>execute/getTerminalOutput</code><br>
+          <code>execute/testFailure</code><br>
+          <code>vscode/askQuestions</code><br>
+          <code>vscode/memory</code><br>
+          <code>web/fetch</code> · <code>agent</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- col 3: tool sets + tip -->
+    <div style="display:flex; flex-direction:column; gap:6px;">
+      <div class="card" style="padding:5px 9px; border-color:rgba(0,134,115,0.35);">
+        <h3 style="font-size:0.65em; margin-bottom:3px; color:var(--allegro-teal);">📦 Tool sets</h3>
+        <pre style="font-size:0.34em; line-height:1.35; margin:0 0 4px 0; background:none; border:none; padding:0; overflow:hidden;"><code>// .vscode/toolsets.jsonc
+{
+  "reader": {
+    "tools": [
+      "search/codebase",
+      "read/readFile",
+      "search/changes"
+    ],
+    "icon": "book"
+  }
+}</code></pre>
+        <div style="font-size:0.37em; color:var(--text-secondary); line-height:1.4;">
+          Użycie: <code>#reader</code> w prompcie<br>
+          lub w <code>tools:</code> agenta<br>
+          Tworzenie: <strong>Chat: Configure Tool Sets</strong>
+        </div>
+      </div>
+
+      <div class="tip" style="font-size:0.38em; padding:5px 9px;">
+        💡 Miksuj: built-ins + MCP + toolset-y. Im węższy zestaw, tym precyzyjniejszy agent.
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1408,9 +1642,11 @@ Zanim zaproponujesz plan:
 <!-- Slide 32 - .instructions.md anatomy -->
 <section>
   <h2 style="margin-bottom:0.3em;">Jak wygląda plik .instructions.md?</h2>
-  <pre style="background:#F0F0F0; border-radius:10px; padding:12px 16px; font-size:0.44em; line-height:1.55; margin:6px 0; border:1px solid #E0E0E0;"><code style="color:#1A1A1A;"><span style="color:var(--allegro-gray);">---</span>                                    <span style="color:var(--allegro-gray);">← YAML start</span>
-<span style="color:var(--allegro-orange);">applyTo: "**/*.sql"</span>                    <span style="color:var(--allegro-gray);">← KIEDY</span>
-<span style="color:var(--allegro-gray);">---</span>                                    <span style="color:var(--allegro-gray);">← YAML end</span>
+  <pre style="background:#F0F0F0; border-radius:10px; padding:12px 16px; font-size:0.44em; line-height:1.55; margin:6px 0; border:1px solid #E0E0E0;"><code style="color:#1A1A1A;"><span style="color:var(--allegro-gray);">---</span>                                        <span style="color:var(--allegro-gray);">← YAML start</span>
+<span style="color:var(--allegro-navy);">name: "SQL Standards"</span>                    <span style="color:var(--allegro-gray);">← ID instrukcji (opcjonalne)</span>
+<span style="color:var(--allegro-navy);">description: "Konwencje SQL @ Allegro"</span>   <span style="color:var(--allegro-gray);">← opis widoczny w UI</span>
+<span style="color:var(--allegro-orange);">applyTo: "**/*.sql"</span>                      <span style="color:var(--allegro-gray);">← KIEDY ładować (glob)</span>
+<span style="color:var(--allegro-gray);">---</span>                                        <span style="color:var(--allegro-gray);">← YAML end</span>
 
 <span style="color:var(--allegro-teal);"># Konwencje SQL @ Allegro</span>              <span style="color:var(--allegro-gray);">← tytuł</span>
 
@@ -1426,7 +1662,7 @@ Zanim zaproponujesz plan:
 | GMV     | General.orders   | price*fx    |
 | Revenue | billings.billings| ...         |</code></pre>
   <div style="font-size:0.52em; line-height:1.5; margin-top:10px;">
-    <p style="margin:3px 0;"><strong class="orange">•</strong> Markdown — bez limitu długości (ale pamiętaj o context!)</p>
+    <p style="margin:3px 0;"><strong class="orange">•</strong> Markdown - bez limitu długości (ale pamiętaj o context!)</p>
     <p style="margin:3px 0;"><strong class="orange">•</strong> Możesz używać tabel, list, nagłówków</p>
     <p style="margin:3px 0;"><strong class="orange">•</strong> Możesz używać XML tags (&lt;conventions&gt;...&lt;/conventions&gt;)</p>
     <p style="margin:3px 0;"><strong class="orange">•</strong> Komentarze tylko gdy logika nieintuicyjna</p>
@@ -1435,7 +1671,7 @@ Zanim zaproponujesz plan:
 
 <!-- Slide 33 - Real instruction examples -->
 <section>
-  <h2 style="margin-bottom:0.3em;">Nasze instrukcje — realne przykłady</h2>
+  <h2 style="margin-bottom:0.3em;">Nasze instrukcje - realne przykłady</h2>
   <div class="three-col" style="gap:12px;">
     <div class="card" style="padding:10px;">
       <h3 style="font-size:0.8em; margin-bottom:2px;">allegro-common</h3>
@@ -1477,8 +1713,71 @@ Zanim zaproponujesz plan:
       </div>
     </div>
   </div>
-  <div class="info" style="margin-top:10px; font-size:0.5em; padding:8px 14px; text-align:center;">
-    Co daje: "**" → zawsze wie o Allegro. "**/*.sql" → zna tabele TYLKO przy SQL. "**/*.py" → zna Python style TYLKO przy Pythonie. <strong>Context window oszczędzony!</strong>
+  <div class="info" style="margin-top:8px; font-size:0.5em; padding:8px 14px; text-align:center;">
+    Co daje: "**" → zawsze wie o Allegro. "**/*.sql" → zna tabele TYLKO przy SQL. "**/*.py" → zna Python style TYLKO przy Pythonie. <strong>Context window oszczędzony.</strong>
+  </div>
+  <div class="tip" style="margin-top:6px; font-size:0.5em; padding:7px 14px;">
+    💡 <strong>Pro tip:</strong> nie musisz pisać od zera - powiedz Copilotowi <code>/create-instruction</code> lub <em>"extract an instruction from this"</em> po dobrej rozmowie → wygeneruje gotowy plik .instructions.md
+  </div>
+</section>
+
+<!-- Slide 34b - Memories vs Instructions -->
+<section>
+  <h2 style="margin-bottom:0.25em; font-size:1.45em;">Memories vs Instructions - kiedy co?</h2>
+  <table style="font-size:0.48em; width:100%; border-collapse:collapse; margin-bottom:10px;">
+    <thead>
+      <tr style="background:var(--allegro-light); border-bottom:2px solid #ddd;">
+        <th style="padding:6px 10px; text-align:left;"></th>
+        <th style="padding:6px 10px; text-align:left; color:var(--allegro-navy);">📋 Instructions</th>
+        <th style="padding:6px 10px; text-align:left; color:var(--allegro-teal);">🧠 Memories</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:5px 10px; color:var(--allegro-gray); font-weight:600;">Kto pisze</td>
+        <td style="padding:5px 10px;">Ty - ręcznie, przed rozmową</td>
+        <td style="padding:5px 10px;">Agent - samodzielnie, w trakcie pracy</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eee; background:#fafafa;">
+        <td style="padding:5px 10px; color:var(--allegro-gray); font-weight:600;">Kiedy ładowane</td>
+        <td style="padding:5px 10px;">Automatycznie wg <code>applyTo</code> (glob)</td>
+        <td style="padding:5px 10px;">User: auto (200 linii) · Session: tylko ta konwersacja</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:5px 10px; color:var(--allegro-gray); font-weight:600;">Treść</td>
+        <td style="padding:5px 10px;">Stałe reguły, style, katalog tabel</td>
+        <td style="padding:5px 10px;">Notatki z pracy - plany, decyzje, odkrycia</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eee; background:#fafafa;">
+        <td style="padding:5px 10px; color:var(--allegro-gray); font-weight:600;">Trwałość</td>
+        <td style="padding:5px 10px;">Permanentna (plik w repo / User\prompts)</td>
+        <td style="padding:5px 10px;">User/Repo: trwałe · Session: kasowane po zamknięciu</td>
+      </tr>
+      <tr>
+        <td style="padding:5px 10px; color:var(--allegro-gray); font-weight:600;">Cel</td>
+        <td style="padding:5px 10px;"><em>„Co AI ma wiedzieć zawsze"</em></td>
+        <td style="padding:5px 10px;"><em>„Co AI zapamiętał z tej pracy"</em></td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+    <div class="card" style="padding:7px 12px; border-color:rgba(5,23,116,0.25);">
+      <h3 style="font-size:0.65em; margin-bottom:3px; color:var(--allegro-navy);">📋 Użyj Instructions gdy…</h3>
+      <div style="font-size:0.44em; color:var(--text-secondary); line-height:1.5;">
+        reguła obowiązuje <strong>zawsze</strong> (kolory Allegro, format dat)<br>
+        wiedza jest <strong>stała</strong> (schemat tabel BQ, konwencje SQL)<br>
+        chcesz <strong>podzielić się</strong> z zespołem (plik w repo)
+      </div>
+    </div>
+    <div class="card" style="padding:7px 12px; border-color:rgba(0,134,115,0.35);">
+      <h3 style="font-size:0.65em; margin-bottom:3px; color:var(--allegro-teal);">🧠 Użyj Memories gdy…</h3>
+      <div style="font-size:0.44em; color:var(--text-secondary); line-height:1.5;">
+        agent ma <strong>pamiętać plan</strong> przez całą sesję pracy<br>
+        chcesz zapisać <strong>preferencje</strong> odkryte w rozmowie<br>
+        (<em>"Remember that I prefer GMV netto"</em>)<br>
+        potrzebujesz <strong>notes tymczasowy</strong> na czas taska
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1496,7 +1795,7 @@ Zanim zaproponujesz plan:
       <div style="font-size:0.54em; line-height:1.4;">
         <strong class="orange">KROK 2:</strong> Otwórz w VS Code → poproś AI o opis
       </div>
-      <pre style="background:#F5F5F5; border-radius:6px; padding:6px 10px; font-size:0.42em; line-height:1.4; margin:4px 0 0; border:1px solid #E0E0E0;"><code style="color:#1A1A1A;">@workspace co jest w tym repo? Jakie instrukcje mogę zaaplikować do mojej pracy analityka danych?</code></pre>
+      <pre style="background:#F5F5F5; border-radius:6px; padding:6px 10px; font-size:0.42em; line-height:1.4; margin:4px 0 0; border:1px solid #E0E0E0;"><code style="color:#1A1A1A;">#codebase co jest w tym repo? Jakie instrukcje mogę zaaplikować do mojej pracy analityka danych?</code></pre>
     </div>
     <div class="card" style="padding:10px 14px;">
       <div style="font-size:0.54em; line-height:1.4;">
@@ -1508,17 +1807,17 @@ Zanim zaproponujesz plan:
       <div style="font-size:0.54em; line-height:1.4;">
         <strong class="orange">KROK 4:</strong> Weryfikuj i kopiuj do globalnego folderu
       </div>
-      <pre style="background:#F5F5F5; border-radius:6px; padding:6px 10px; font-size:0.42em; line-height:1.4; margin:4px 0 0; border:1px solid #E0E0E0;"><code style="color:#1A1A1A;">~\Users\imie.nazwisko\.github\prompts</code></pre>
+      <pre style="background:#F5F5F5; border-radius:6px; padding:6px 10px; font-size:0.42em; line-height:1.4; margin:4px 0 0; border:1px solid #E0E0E0;"><code style="color:#1A1A1A;">~\Code\User\prompts</code></pre>
     </div>
   </div>
   <div class="tip" style="margin-top:6px; font-size:0.5em; padding:8px 14px; text-align:center;">
-    💡 AI potrafi pisać instrukcje LEPIEJ niż większość ludzi — wystarczy dać mu kontekst i poprosić o strukturę
+    💡 Proś AI o pisanie instrukcji, ale SPRAWDZAJ, MODYFIKUJ, AKTUALIZUJ.
   </div>
 </section>
 
 <!-- Slide 35 - allegro_theme.py -->
 <section>
-  <h2 style="margin-bottom:0.3em;">allegro_theme.py — kolory Allegro w wykresach</h2>
+  <h2 style="margin-bottom:0.3em;">allegro_theme.py - kolory Allegro w wykresach</h2>
   <div class="two-col" style="gap:24px; align-items:start;">
     <div>
       <h3 style="font-size:0.9em; margin-bottom:4px;">KOD</h3>
@@ -1571,7 +1870,7 @@ apply_allegro_theme()
     <p style="margin:3px 0;"><strong class="orange">3.</strong> Copilot automatycznie używa kolorów Allegro</p>
   </div>
   <div class="tip" style="margin-top:8px; font-size:0.5em; padding:8px 14px; text-align:center;">
-    💡 Poproś AI: "stwórz mi plik theme z kolorami mojej firmy" — i dostajesz gotowy plik do importowania
+    💡 Poproś AI: "stwórz mi plik theme z kolorami mojej firmy" - i dostajesz gotowy plik do importowania
   </div>
 </section>
 
@@ -1579,7 +1878,7 @@ apply_allegro_theme()
 <section>
   <h2 style="margin-bottom:0.3em;">Jak zbudować prompt? (.prompt.md)</h2>
   <pre style="background:#F0F0F0; border-radius:10px; padding:12px 16px; font-size:0.42em; line-height:1.5; margin:6px 0; border:1px solid #E0E0E0;"><code style="color:#1A1A1A;"><span style="color:var(--allegro-gray);">---</span>                                    <span style="color:var(--allegro-gray);">← YAML start</span>
-<span style="color:var(--allegro-orange);">mode: agent</span>                            <span style="color:var(--allegro-gray);">← tryb</span>
+<span style="color:var(--allegro-orange);">agent: agent</span>                            <span style="color:var(--allegro-gray);">← tryb</span>
 <span style="color:var(--allegro-orange);">description: "Sprawdź jakość danych</span>    <span style="color:var(--allegro-gray);">← OPIS (!)</span>
 <span style="color:var(--allegro-orange);">  i logikę SQL/analizy"</span>
 <span style="color:var(--allegro-orange);">tools:</span>                                 <span style="color:var(--allegro-gray);">← narzędzia</span>
@@ -1600,6 +1899,75 @@ Zapytaj:
 <span style="color:var(--allegro-teal);"># KROK 2: CHECKLISTA WERYFIKACJI</span>      <span style="color:var(--allegro-gray);">← WORKFLOW</span>
 Sprawdź każdy punkt...</code></pre>
   <p style="font-size:0.54em; margin-top:8px;">Wywołanie: <code style="background:rgba(0,0,0,0.04); padding:2px 6px; border-radius:4px;">/sanity-check mój GMV za Q1</code></p>
+</section>
+
+<!-- Slide 37b - Input variables -->
+<section>
+  <h2 style="margin-bottom:0.12em; font-size:1.3em;">Dynamiczne prompty - jak przekazać kontekst?</h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+
+    <!-- left -->
+    <div style="display:flex; flex-direction:column; gap:5px;">
+      <div class="card" style="padding:5px 9px;">
+        <h3 style="font-size:0.62em; margin-bottom:2px;">❓ Po co?</h3>
+        <div style="font-size:0.4em; color:var(--text-secondary); line-height:1.4;">
+          Prompt statyczny = za każdym razem to samo zapytanie.<br>
+          Żeby prompt był <strong>użyteczny dla różnych przypadków</strong>, potrzeba mu kontekstu od usera.<br>
+          Trzy podejścia - różnią się miejscem i momentem podania wartości.
+        </div>
+      </div>
+
+      <div class="card" style="padding:5px 9px;">
+        <h3 style="font-size:0.62em; margin-bottom:2px;">📂 Przykład pliku</h3>
+        <pre style="font-size:0.35em; line-height:1.3; margin:0; background:none; border:none; padding:0; overflow:hidden;"><code>---
+name: sql-query-builder
+description: "Zbuduj query BigQuery"
+argument-hint: "[metryka] [zakres] [marketplace]"
+agent: agent
+tools: ['search', 'read', 'vscode/askQuestions']
+---
+Napisz query BigQuery.
+Kontekst od usera: ${input}
+
+Użyj tabel z sql-catalog.instructions.md.</code></pre>
+      </div>
+    </div>
+
+    <!-- right -->
+    <div style="display:flex; flex-direction:column; gap:5px;">
+      <div class="card" style="padding:5px 9px; border-color:rgba(5,23,116,0.2);">
+        <h3 style="font-size:0.62em; margin-bottom:2px; color:var(--allegro-navy);">1️⃣ argument-hint - najprostsza metoda</h3>
+        <pre style="font-size:0.36em; line-height:1.35; margin:0 0 3px; background:none; border:none; padding:0;"><code>argument-hint: "[metryka] [zakres] [marketplace]"</code></pre>
+        <div style="font-size:0.39em; color:var(--text-secondary); line-height:1.4;">
+          W polu czatu pojawia się szara podpowiedź.<br>
+          User pisze: <code>/sql-query-builder GMV, ostatnie 30 dni, PL</code><br>
+          Cały tekst po nazwie komendy trafia do prompta jako <code>${input}</code>.
+        </div>
+      </div>
+
+      <div class="card" style="padding:5px 9px; border-color:rgba(255,90,0,0.3);">
+        <h3 style="font-size:0.62em; margin-bottom:2px; color:var(--allegro-orange);">2️⃣ vscode/askQuestions - agent pyta sam</h3>
+        <pre style="font-size:0.35em; line-height:1.3; margin:0 0 3px; background:none; border:none; padding:0;"><code>tools: ['vscode/askQuestions', 'search', 'read']</code></pre>
+        <div style="font-size:0.39em; color:var(--text-secondary); line-height:1.4;">
+          Agent interaktywnie zadaje pytania w trakcie działania.<br>
+          Pojawia się formularz z pytaniami, które sam sformułuje na podstawie treści prompta.<br>
+          <strong>Najwygodniejsze</strong> - user nie musi wiedzieć co podać z góry.
+        </div>
+      </div>
+
+      <div class="card" style="padding:5px 9px; border-color:rgba(0,134,115,0.35);">
+        <h3 style="font-size:0.62em; margin-bottom:2px; color:var(--allegro-teal);">3️⃣ Kontekst w czacie - najszybsze</h3>
+        <div style="font-size:0.39em; color:var(--text-secondary); line-height:1.4;">
+          Wywołaj prompt i dopisz kontekst w tej samej wiadomości:<br>
+          <code>/sql-query-builder GMV per vertical, wczoraj, PL</code><br><br>
+          Albo dołącz plik: <code>/sql-query-builder #moj-plik.sql</code><br>
+          Copilot przekazuje całą wiadomość jako kontekst do prompta.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
 <!-- Slide 37 - Real prompt examples -->
@@ -1644,13 +2012,15 @@ Sprawdź każdy punkt...</code></pre>
     </div>
   </div>
   <div class="tip" style="margin-top:10px; font-size:0.5em; padding:8px 14px; text-align:center;">
-    💡 Każdy prompt to plik .prompt.md w folderze prompts/ — wywoływany przez /nazwa w czacie Copilota
+    💡 Każdy prompt to plik .prompt.md w folderze prompts/ - wywoływany przez /nazwa w czacie Copilota
   </div>
 </section>
 
+
+
 <!-- Slide 38 - Metaprompting -->
 <section>
-  <h2 style="margin-bottom:0.3em;">Metaprompting — prompt który buduje prompt</h2>
+  <h2 style="margin-bottom:0.3em;">Metaprompting - prompt który buduje prompt</h2>
   <div style="display:flex; justify-content:center; gap:16px; margin:12px 0;">
     <div class="card" style="padding:12px 18px; text-align:center; flex:0 0 auto;">
       <div style="font-size:0.65em; font-weight:700;">1. Opisz CEL</div>
@@ -1676,60 +2046,226 @@ Sprawdź każdy punkt...</code></pre>
     <p style="font-size:0.54em; margin-bottom:4px;">Zaawansowane: metaprompting w 3 krokach</p>
     <div class="card" style="padding:10px 14px;">
       <div style="font-size:0.5em; line-height:1.5;">
-        <strong class="orange">1.</strong> "Stwórz 3 drafty prompta — każdy innym stylem"<br>
+        <strong class="orange">1.</strong> "Stwórz 3 drafty prompta - każdy innym stylem"<br>
         <strong class="orange">2.</strong> "Porównaj: wypisz mocne i słabe strony każdego"<br>
         <strong class="orange">3.</strong> "Połącz najlepsze elementy w finalny prompt"
       </div>
     </div>
   </div>
-  <div class="tip" style="margin-top:8px; font-size:0.5em; padding:8px 14px; text-align:center;">
-    💡 AI pisze prompty LEPIEJ niż większość ludzi. Wy dacie cel — AI da strukturę.
-  </div>
+
 </section>
 
 <!-- Slide 39 - Agent with full identity -->
 <section>
-  <h2 style="margin-bottom:0.3em;">Agent = AI z tożsamością, narzędziami i workflow</h2>
-  <div style="display:flex; justify-content:center; margin:6px 0;">
-    <div class="card highlight" style="padding:12px 20px; text-align:center; min-width:300px;">
-      <div style="font-size:0.7em; font-weight:700;">🤖 ds-analyst.agent.md</div>
-      <div style="font-size:0.5em; color:#767676; margin-top:6px; line-height:1.5;">
+  <h2 style="margin-bottom:0.2em; font-size:1.4em;">Agent = AI z tożsamością, narzędziami i workflow</h2>
+  <div style="display:flex; flex-direction:column; gap:5px; align-items:center;">
+
+    <div class="card highlight" style="padding:8px 14px; text-align:center; width:60%;">
+      <div style="font-size:0.65em; font-weight:700;">🤖 ds-analyst.agent.md</div>
+      <div style="font-size:0.4em; color:#767676; margin-top:3px; line-height:1.5;">
         <strong>PERSONA:</strong> "Doświadczony analityk danych w Allegro"<br>
-        <strong>TRYBY PRACY:</strong> Pełny cykl projektu · Kontynuacja · Szybka odpowiedź
+        <strong>TRYBY:</strong> Pełny cykl · Kontynuacja · Szybka odpowiedź
+      </div>
+    </div>
+
+    <div style="font-size:0.8em; color:var(--allegro-orange); line-height:1; margin:-2px 0;">┃<br>┌──────┬──────┼──────┬──────┐</div>
+
+    <div style="display:grid; grid-template-columns:repeat(5, 1fr); gap:5px; width:100%;">
+      <div class="card" style="padding:5px 6px; text-align:center;">
+        <h3 style="font-size:0.55em; margin-bottom:2px;">🔧 Tools</h3>
+        <div style="font-size:0.35em; line-height:1.45; color:#767676;">codebase<br>omnidoc<br>editFiles<br>terminal</div>
+      </div>
+      <div class="card" style="padding:5px 6px; text-align:center;">
+        <h3 style="font-size:0.55em; margin-bottom:2px;">📋 Instructions</h3>
+        <div style="font-size:0.35em; line-height:1.45; color:#767676;">sql-catalog<br>python-style<br>allegro-common</div>
+      </div>
+      <div class="card" style="padding:5px 6px; text-align:center;">
+        <h3 style="font-size:0.55em; margin-bottom:2px;">⚡ Prompts</h3>
+        <div style="font-size:0.35em; line-height:1.45; color:#767676;">/write-eda<br>/sanity-check<br>/create-dag</div>
+      </div>
+      <div class="card" style="padding:5px 6px; text-align:center;">
+        <h3 style="font-size:0.55em; margin-bottom:2px;">🔀 Handoffs</h3>
+        <div style="font-size:0.35em; line-height:1.45; color:#767676;">Plan → [Implementuj]<br>→ ds-analyst<br>send: false / true</div>
+      </div>
+      <div class="card" style="padding:5px 6px; text-align:center;">
+        <h3 style="font-size:0.55em; margin-bottom:2px;">🤖 Agents</h3>
+        <div style="font-size:0.35em; line-height:1.45; color:#767676;">data-discovery<br>code-reviewer<br>new-project</div>
+      </div>
+    </div>
+
+    <div class="tip" style="font-size:0.4em; padding:5px 9px; text-align:center; width:80%;">
+      Agent <strong>ŁĄCZY</strong> wszystko w jedną tożsamość. Copilot sam go wywołuje gdy pasuje do pytania.
+    </div>
+  </div>
+</section>
+
+<!-- Slide 39b - Agent anatomy -->
+<section>
+  <h2 style="margin-bottom:0.15em; font-size:1.3em;">Jak zbudować agenta? (.agent.md)</h2>
+  <pre style="background:#F0F0F0; border-radius:10px; padding:10px 14px; font-size:0.38em; line-height:1.45; margin:4px 0; border:1px solid #E0E0E0;"><code style="color:#1A1A1A;"><span style="color:var(--allegro-gray);">---</span>                                             <span style="color:var(--allegro-gray);">← YAML start</span>
+<span style="color:var(--allegro-orange);">name: ds-analyst</span>                                 <span style="color:var(--allegro-gray);">← ID agenta</span>
+<span style="color:var(--allegro-orange);">description: "Tryb analityka danych Allegro"</span>      <span style="color:var(--allegro-gray);">← Opis - pojawia się w drop-downie</span>
+<span style="color:var(--allegro-orange);">argument-hint: "Opisz temat projektu"</span>            <span style="color:var(--allegro-gray);">← podpowiedź w polu czatu</span>
+<span style="color:var(--allegro-navy);">user-invocable: true</span>                             <span style="color:var(--allegro-gray);">← widoczny w dropdown (false = wewnętrzny)</span>
+<span style="color:var(--allegro-navy);">disable-model-invocation: false</span>                   <span style="color:var(--allegro-gray);">← true = blokuje auto-wywołanie</span>
+<span style="color:var(--allegro-navy);">model: auto</span>                                      <span style="color:var(--allegro-gray);">← auto / konkretny / [lista priorytetów]</span>
+<span style="color:var(--allegro-orange);">tools:</span>                                           <span style="color:var(--allegro-gray);">← narzędzia</span>
+<span style="color:var(--allegro-orange);">  - search</span>
+<span style="color:var(--allegro-orange);">  - read</span>
+<span style="color:var(--allegro-orange);">  - edit/editFiles</span>
+<span style="color:var(--allegro-orange);">  - agent</span>                                        <span style="color:var(--allegro-gray);">← umożliwia subagentów</span>
+<span style="color:var(--allegro-orange);">  - mcp_omnidoc_omnidoc</span>
+<span style="color:var(--allegro-teal);">agents: ['data-discovery', 'code-reviewer']</span>      <span style="color:var(--allegro-gray);">← dozwolone subAgenci</span>
+<span style="color:var(--allegro-teal);">handoffs:</span>                                        <span style="color:var(--allegro-gray);">← przyciski po zakończeniu</span>
+<span style="color:var(--allegro-teal);">  - label: "Zacznij implementację"</span>
+<span style="color:var(--allegro-teal);">    agent: ds-analyst</span>
+<span style="color:var(--allegro-teal);">    send: false</span>                                   <span style="color:var(--allegro-gray);">← false = user edytuje, true = auto</span>
+<span style="color:var(--allegro-gray);">---</span>                                             <span style="color:var(--allegro-gray);">← YAML end</span>
+
+<span style="color:var(--allegro-teal);">Jesteś doświadczonym analitykiem danych.</span>          <span style="color:var(--allegro-gray);">← PERSONA</span>
+Pracujesz w Allegro, znasz BQ i Airflow.
+
+<span style="color:var(--allegro-teal);">&lt;workflow&gt;</span>                                       <span style="color:var(--allegro-gray);">← FAZY PRACY</span>
+1. Zrozum pytanie biznesowe
+2. Znajdź tabele (subagent: data-discovery)
+3. Napisz SQL i analizę
+4. Sprawdź kod (subagent: code-reviewer)
+<span style="color:var(--allegro-teal);">&lt;/workflow&gt;</span>
+
+<span style="color:var(--allegro-teal);">&lt;rules&gt;</span>                                          <span style="color:var(--allegro-gray);">← CZEGO NIE ROBI</span>
+- Nie publikuj bez review
+<span style="color:var(--allegro-teal);">&lt;/rules&gt;</span></code></pre>
+  <p style="font-size:0.48em; margin-top:6px;">Wywołanie: wybierz <strong class="orange">@ds-analyst</strong> z dropdown lub <code>/create-agent</code> żeby wygenerować szkielet</p>
+</section>
+
+<!-- Slide 39c - Handoffs vs Subagents -->
+<section>
+  <h2 style="margin-bottom:0.2em; font-size:1.4em;">Handoffs vs Subagenci - dwa wzorce orchestracji</h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:7px;">
+
+    <div class="card" style="padding:7px 11px; border-color:rgba(255,90,0,0.35);">
+      <h3 style="font-size:0.65em; margin-bottom:4px; color:var(--allegro-orange);">🔀 Handoffs - user decyduje</h3>
+      <div style="font-size:0.41em; color:var(--text-secondary); line-height:1.5;">
+        Po zakończeniu fazy → agent pokazuje <strong>button</strong><br>
+        User klika → przechodzi do kolejnego agenta<br>
+        Context window: <strong>wspólny</strong> (pełna historia widoczna)<br><br>
+        <strong>Kiedy:</strong> chcesz mieć kontrolę nad każdą fazą<br>
+        <em>Plan → [Zacznij implementację] → Implement → [Review] → Reviewer</em>
+      </div>
+      <pre style="font-size:0.34em; line-height:1.3; margin:4px 0 0; background:none; border:none; padding:0;"><code>handoffs:
+  - label: "Zacznij implementację"
+    agent: ds-analyst
+    send: false   # user może edytować prompt</code></pre>
+    </div>
+
+    <div class="card" style="padding:7px 11px; border-color:rgba(0,134,115,0.35);">
+      <h3 style="font-size:0.65em; margin-bottom:4px; color:var(--allegro-teal);">🤖 Subagenci - agent deleguje</h3>
+      <div style="font-size:0.41em; color:var(--text-secondary); line-height:1.5;">
+        Agent sam wywołuje wyspecjalizowanych workerów <strong>w tle</strong><br>
+        User nie widzi szczegółów - dostaje gotowy wynik<br>
+        Context window: <strong>osobne</strong> dla każdego subagenta<br><br>
+        <strong>Kiedy:</strong> task "pod maską", user nie musi zatwierdzać<br>
+        <em>ds-analyst → data-discovery (tabele) → code-reviewer (review)</em>
+      </div>
+      <pre style="font-size:0.34em; line-height:1.3; margin:4px 0 0; background:none; border:none; padding:0;"><code>agents: ['data-discovery', 'code-reviewer']
+# mogą działać równolegle!</code></pre>
+    </div>
+
+  </div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+    <div style="font-size:0.4em; color:var(--text-secondary);">
+      <table style="width:100%; border-collapse:collapse; font-size:1em;">
+        <thead><tr style="border-bottom:2px solid #ddd; background:var(--allegro-light);">
+          <th style="padding:4px 8px; text-align:left; font-weight:600;"></th>
+          <th style="padding:4px 8px; text-align:left; color:var(--allegro-gray); font-weight:700;">🔀 Handoffs</th>
+          <th style="padding:4px 8px; text-align:left; color:var(--allegro-gray); font-weight:700;">🤖 Subagenci</th>
+        </tr></thead>
+        <tbody>
+          <tr style="border-bottom:1px solid #eee;"><td style="padding:2px 6px; color:var(--allegro-gray);">Context</td><td style="padding:2px 6px;">wspólny</td><td style="padding:2px 6px;">izolowany</td></tr>
+          <tr style="border-bottom:1px solid #eee;"><td style="padding:2px 6px; color:var(--allegro-gray);">Kontrola usera</td><td style="padding:2px 6px;">przy każdej fazie</td><td style="padding:2px 6px;">tylko wynik</td></tr>
+          <tr style="border-bottom:1px solid #eee;"><td style="padding:2px 6px; color:var(--allegro-gray);">Równoległość</td><td style="padding:2px 6px;">nie</td><td style="padding:2px 6px;">tak</td></tr>
+          <tr><td style="padding:2px 6px; color:var(--allegro-gray);">Model</td><td style="padding:2px 6px;">ten sam</td><td style="padding:2px 6px;">może być inny</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card" style="padding:6px 10px; border-color:rgba(5,23,116,0.2);">
+      <h3 style="font-size:0.6em; margin-bottom:3px; color:var(--allegro-navy);">3️⃣ Combo: oba naraz</h3>
+      <div style="font-size:0.39em; color:var(--text-secondary); line-height:1.4;">
+        Agent robi research w tle (subagent), ale daje button na kluczowe decyzje:<br>
+        <em>Feature Builder → data-discovery (w tle) → pisze kod → [Review kodu] → code-reviewer</em>
       </div>
     </div>
   </div>
-  <div style="text-align:center; font-size:1em; color:var(--allegro-orange); line-height:1;">┃</div>
-  <div style="display:flex; justify-content:center; gap:8px; font-size:0.8em; color:var(--allegro-orange); margin:2px 0;">
-    ┌──────────┼──────────┐
+</section>
+
+<!-- Slide 39d - Orchestration patterns -->
+<section>
+  <h2 style="margin-bottom:0.15em; font-size:1.4em;">Wzorce orchestracji agentów</h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:7px;">
+
+    <div class="card" style="padding:6px 10px; border-color:rgba(255,90,0,0.3);">
+      <h3 style="font-size:0.63em; margin-bottom:3px; color:var(--allegro-orange);">📐 Coordinator + Workers</h3>
+      <div style="font-size:0.39em; color:var(--text-secondary); line-height:1.5; margin-bottom:4px;">
+        Główny agent rozbija zadanie i deleguje do wyspecjalizowanych workerów.<br>
+        Workerzy mają <strong>tańsze modele</strong> i wąski zakres.
+      </div>
+      <pre style="font-size:0.33em; line-height:1.3; background:none; border:none; padding:0; margin:0;"><code>ds-analyst (coordinator)
+  ├─ data-discovery     # znajdź tabele
+  ├─ sql-writer         # napisz SQL
+  └─ code-reviewer      # sprawdź kod
+
+Worker = user-invocable: false
+       + model: Haiku (tańszy)</code></pre>
+    </div>
+
+    <div class="card" style="padding:6px 10px; border-color:rgba(0,134,115,0.3);">
+      <h3 style="font-size:0.63em; margin-bottom:3px; color:var(--allegro-teal);">⚡ Równoległe subAgenci</h3>
+      <div style="font-size:0.39em; color:var(--text-secondary); line-height:1.5; margin-bottom:4px;">
+        Jeden coordinator odpala wielu subagentów <strong>jednocześnie</strong> → zsyntetyzuje wyniki.<br>
+        Szybszy wynik niż sekwencja.
+      </div>
+      <pre style="font-size:0.33em; line-height:1.3; background:none; border:none; padding:0; margin:0;"><code>thorough-reviewer
+  → review-correctness  ┐
+  → review-performance  ├ równolegle
+  → review-security     ┘
+  → synteza wyników
+
+Każdy widzi ten sam kod,
+każdy patrzy przez inną soczewkę.</code></pre>
+    </div>
+
+    <div class="card" style="padding:6px 10px; border-color:rgba(5,23,116,0.2);">
+      <h3 style="font-size:0.63em; margin-bottom:3px; color:var(--allegro-navy);">🔁 Recursive Agent</h3>
+      <div style="font-size:0.39em; color:var(--text-secondary); line-height:1.5; margin-bottom:4px;">
+        Agent wywołuje <strong>sam siebie</strong> jako subagenta.<br>
+        Każde wywołanie dostaje osobne context window.
+      </div>
+      <pre style="font-size:0.33em; line-height:1.3; background:none; border:none; padding:0; margin:0;"><code>sql-migrator (20 plików)
+  → sql-migrator (1-7)
+  → sql-migrator (8-14)
+  → sql-migrator (15-20)
+
+agents: ['sql-migrator']  # sam siebie!
+# wymaga: allowInvocationsFromSubagents: true
+# max depth: 5</code></pre>
+    </div>
+
   </div>
-  <div class="three-col" style="gap:10px;">
-    <div class="card" style="padding:10px; text-align:center;">
-      <h3 style="font-size:0.8em; margin-bottom:4px;">🔧 Tools</h3>
-      <div style="font-size:0.48em; line-height:1.5; color:#767676;">
-        codebase<br>omnidoc<br>editFile<br>terminal
+
+  <div style="margin-top:6px;">
+    <div class="card" style="padding:6px 12px; border-color:rgba(5,23,116,0.2);">
+      <h3 style="font-size:0.6em; margin-bottom:3px; color:var(--allegro-navy);">🔗 Nested subagents - subagent wywołuje subagenta</h3>
+      <div style="font-size:0.39em; color:var(--text-secondary); line-height:1.55;">
+        Domyślnie <strong>wyłączone</strong> - subagent nie może wywołać kolejnego subagenta. Włączenie: <code>chat.subagents.allowInvocationsFromSubagents: true</code> · Max głębokość: <strong>5</strong> · Agent musi mieć base case (warunek stopu). Przykład: <code>sql-migrator</code> → wywołuje sam siebie na podgrupach plików.
       </div>
     </div>
-    <div class="card" style="padding:10px; text-align:center;">
-      <h3 style="font-size:0.8em; margin-bottom:4px;">📋 Instructions</h3>
-      <div style="font-size:0.48em; line-height:1.5; color:#767676;">
-        sql-catalog<br>python-style<br>allegro-common
-      </div>
-    </div>
-    <div class="card" style="padding:10px; text-align:center;">
-      <h3 style="font-size:0.8em; margin-bottom:4px;">⚡ Prompts</h3>
-      <div style="font-size:0.48em; line-height:1.5; color:#767676;">
-        /write-eda<br>/sanity-check<br>/create-dag
-      </div>
-    </div>
-  </div>
-  <div style="font-size:0.5em; line-height:1.45; margin-top:8px;">    Agent <strong>ŁĄCZY</strong> wszystko: zna konwencje (instructions), umie wykonać zadania (prompty), ma dostęp do narzędzi. Copilot sam go wywołuje gdy pasuje do pytania.
   </div>
 </section>
 
 <!-- Slide 40 - Agent proposals for data analysts -->
 <section>
-  <h2 style="margin-bottom:0.3em;">Agenty do codziennej pracy analityka</h2>
+  <h2 style="margin-bottom:0.3em;">Agenci do codziennej pracy analityka</h2>
   <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
     <div class="card" style="padding:12px;">
       <h3 style="font-size:0.85em; margin-bottom:4px;">🔬 ds-analyst</h3>
@@ -1761,13 +2297,13 @@ Sprawdź każdy punkt...</code></pre>
     </div>
   </div>
   <div class="tip" style="margin-top:10px; font-size:0.5em; padding:8px 14px; text-align:center;">
-    💡 Nie musisz budować od zera — możesz poprosić AI o budowę agentów
+    💡 Nie musisz budować od zera - możesz poprosić AI o budowę agentów
   </div>
 </section>
 
 <!-- Slide 41 - Skill chaining pipeline -->
 <section>
-  <h2 style="margin-bottom:0.2em;">Skill chaining — pipeline analityczny</h2>
+  <h2 style="margin-bottom:0.2em;">Skill chaining - pipeline analityczny</h2>
   <p style="font-size:0.54em; color:#767676; margin-bottom:10px;">Zamiast: jeden prompt na wszystko. Lepiej: sekwencja wyspecjalizowanych promptów</p>
   <div style="display:flex; gap:8px; align-items:stretch; margin:8px 0;">
     <div class="card" style="padding:10px; flex:1; text-align:center;">
@@ -1813,7 +2349,7 @@ Sprawdź każdy punkt...</code></pre>
 
 <!-- Slide 42 - Agentic Workflow -->
 <section>
-  <h2 style="margin-bottom:0.3em;">Agentic Workflow — optymalny przepływ pracy</h2>
+  <h2 style="margin-bottom:0.3em;">Agentic Workflow - optymalny przepływ pracy</h2>
   <div class="three-col" style="gap:12px;">
     <div class="card" style="padding:12px; text-align:center;">
       <h3 style="font-size:0.85em; margin-bottom:4px;">🧠 ETAP 1: PLAN</h3>
@@ -1845,8 +2381,49 @@ Sprawdź każdy punkt...</code></pre>
   </div>
   <div class="tip" style="font-size:0.5em; padding:8px 14px; text-align:center;">
     💡 Każdy etap = osobny czat = czysty kontekst.<br>
-    Drogi model MYŚLI. Tani model WYKONUJE.<br>
-    Context Rot: z <strong>88%</strong> → <strong>30%</strong> jakości przy 32k tokenów!
+    Drogi model MYŚLI. Tani model WYKONUJE.
+  </div>
+</section>
+
+<!-- Slide 42b - Chat Customizations panel -->
+<section>
+  <h2 style="margin-bottom:0.2em; font-size:1.3em;">⚙️ Chat Customizations - podgląd załadowanych elementów</h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; align-items:start;">
+
+    <div style="display:flex; flex-direction:column; gap:6px;">
+      <div class="card" style="padding:8px 12px;">
+        <div style="font-size:0.42em; line-height:1.6; color:var(--text-secondary);">
+          Ikona <strong class="orange">⚙️ koła zębatego</strong> w prawym górnym rogu panelu czatu → <strong>Open Customizations</strong><br><br>
+          Pokazuje wszystko co Copilot aktualnie widzi:
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px; margin-top:6px;">
+          <div style="font-size:0.4em; padding:4px 8px; background:var(--allegro-light); border-radius:6px; text-align:center;"><strong>Agents</strong> · 11</div>
+          <div style="font-size:0.4em; padding:4px 8px; background:var(--allegro-light); border-radius:6px; text-align:center;"><strong>Skills</strong> · 12</div>
+          <div style="font-size:0.4em; padding:4px 8px; background:var(--allegro-light); border-radius:6px; text-align:center;"><strong>Instructions</strong> · 8</div>
+          <div style="font-size:0.4em; padding:4px 8px; background:var(--allegro-light); border-radius:6px; text-align:center;"><strong>Prompts</strong> · 24</div>
+          <div style="font-size:0.4em; padding:4px 8px; background:var(--allegro-light); border-radius:6px; text-align:center;"><strong>Hooks</strong> · 1</div>
+          <div style="font-size:0.4em; padding:4px 8px; background:var(--allegro-light); border-radius:6px; text-align:center;"><strong>MCP Servers</strong> · 5</div>
+        </div>
+      </div>
+
+      <div class="tip" style="font-size:0.39em; padding:5px 10px;">
+        💡 Jeśli agent/instrukcja nie działa - sprawdź tu czy w ogóle się załadowała. Najczęstszy powód: brakujący lub błędny <code>description</code> w YAML.
+      </div>
+    </div>
+
+    <div class="card" style="padding:8px 12px;">
+      <h3 style="font-size:0.58em; margin-bottom:4px;">Co widzisz w panelu?</h3>
+      <div style="font-size:0.39em; color:var(--text-secondary); line-height:1.6;">
+        <strong class="orange">Agents</strong> - Twoje .agent.md + wbudowane (Plan, Explore)<br>
+        <strong class="orange">Skills</strong> - SKILL.md z .github/skills/<br>
+        <strong class="orange">Instructions</strong> - .instructions.md (globalne + repo)<br>
+        <strong class="orange">Prompts</strong> - .prompt.md (komendy /)<br>
+        <strong class="orange">Hooks</strong> - automatyczne akcje (pre/post)<br>
+        <strong class="orange">MCP Servers</strong> - zewnętrzne serwery narzędzi<br><br>
+        Każdy element pokazuje <strong>name</strong> i <strong>description</strong> - dokładnie to, co Copilot widzi przy decyzji o załadowaniu.
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1890,14 +2467,14 @@ Sprawdź każdy punkt...</code></pre>
 
 <!-- Slide 45 - Changelog.md -->
 <section>
-  <h2 style="margin-bottom:0.3em;">Changelog.md — pamięć projektu między sesjami</h2>
+  <h2 style="margin-bottom:0.3em;">Changelog.md - pamięć projektu między sesjami</h2>
   <div class="two-col with-divider">
     <div>
       <h3 style="font-size:0.9em; margin-bottom:6px;">PO CO?</h3>
       <div style="font-size:0.52em; line-height:1.55;">
         <p style="margin:5px 0;"><strong class="orange">•</strong> <strong>Minimalizuje halucynacje:</strong><br>resetujesz sesję → AI czyta changelog → wie co zrobiono</p>
-        <p style="margin:5px 0;"><strong class="orange">•</strong> <strong>Oszczędza context window:</strong><br>zamiast przewijać 50 wiadomości — AI czyta 1 plik z podsumowaniem</p>
-        <p style="margin:5px 0;"><strong class="orange">•</strong> <strong>Wersjonowanie decyzji:</strong><br>"zmieniliśmy definicję GMV netto — bo uwzględniamy refundy"</p>
+        <p style="margin:5px 0;"><strong class="orange">•</strong> <strong>Oszczędza context window:</strong><br>zamiast przewijać 50 wiadomości - AI czyta 1 plik z podsumowaniem</p>
+        <p style="margin:5px 0;"><strong class="orange">•</strong> <strong>Wersjonowanie decyzji:</strong><br>"zmieniliśmy definicję GMV netto - bo uwzględniamy refundy"</p>
       </div>
     </div>
     <div>
@@ -1928,10 +2505,10 @@ Sprawdź każdy punkt...</code></pre>
 
 <!-- Slide 46 - README.md and /init -->
 <section>
-  <h2 style="margin-bottom:0.2em;">README.md i /init — niech AI opisze Twój projekt</h2>
+  <h2 style="margin-bottom:0.2em;">README.md i /init - niech AI opisze Twój projekt</h2>
   <div style="display:flex; flex-direction:column; gap:8px;">
     <div>
-      <h3 style="font-size:0.9em; margin-bottom:4px;">📄 README.md — opis projektu</h3>
+      <h3 style="font-size:0.9em; margin-bottom:4px;">📄 README.md - opis projektu</h3>
       <div class="card" style="padding:10px 14px;">
         <div style="font-size:0.5em; line-height:1.5;">
           <strong class="orange">Prompt:</strong> <em>"Na podstawie plików w tym repo napisz README.md: cel projektu, użyte tabele, główne metryki, jak uruchomić, kto jest odbiorcą"</em><br><br>
@@ -1940,7 +2517,7 @@ Sprawdź każdy punkt...</code></pre>
       </div>
     </div>
     <div>
-      <h3 style="font-size:0.9em; margin-bottom:4px;">⚙️ /init — automatyczna konfiguracja AI per projekt</h3>
+      <h3 style="font-size:0.9em; margin-bottom:4px;">⚙️ /init - automatyczna konfiguracja AI per projekt</h3>
       <div class="card" style="padding:10px 14px;">
         <div style="font-size:0.5em; line-height:1.5;">
           Wpisz <strong class="orange">/init</strong> w czacie Copilota<br>
@@ -1965,7 +2542,7 @@ Sprawdź każdy punkt...</code></pre>
   <h2 style="margin-bottom:0.2em;">Wirtualne środowisko i żywa baza wiedzy</h2>
   <div style="display:flex; flex-direction:column; gap:8px;">
     <div>
-      <h3 style="font-size:0.9em; margin-bottom:4px;">🐍 venv — izolacja zależności per projekt</h3>
+      <h3 style="font-size:0.9em; margin-bottom:4px;">🐍 venv - izolacja zależności per projekt</h3>
       <div class="card" style="padding:10px 14px;">
         <pre style="background:#F5F5F5; border-radius:6px; padding:8px 12px; font-size:0.44em; line-height:1.5; margin:0; border:1px solid #E0E0E0;"><code style="color:#1A1A1A;">python -m venv .venv
 .venv\Scripts\activate          # Windows
@@ -1979,7 +2556,7 @@ pip install pandas streamlit plotly</code></pre>
       <h3 style="font-size:0.9em; margin-bottom:4px;">🔄 Aktualizacja bazy wiedzy AI</h3>
       <div class="card" style="padding:10px 14px;">
         <div style="font-size:0.5em; line-height:1.55;">
-          <em>"Zapamiętaj, że w SQL-u zawsze używam dat bezwzględnych — zupdatuj globalne instrukcje sql-catalog"</em><br><br>
+          <em>"Zapamiętaj, że w SQL-u zawsze używam dat bezwzględnych - zupdatuj globalne instrukcje sql-catalog"</em><br><br>
           <em>"Dodaj do moich globalnych instrukcji Python: zawsze używaj polars zamiast pandas dla plików > 1GB"</em><br><br>
           → AI sam edytuje Wasze .instructions.md
         </div>
@@ -1987,13 +2564,13 @@ pip install pandas streamlit plotly</code></pre>
     </div>
   </div>
   <div class="tip" style="margin-top:8px; font-size:0.5em; padding:8px 14px; text-align:center;">
-    💡 Baza wiedzy AI nie jest statyczna — rozwijaj ją ciągle. Każdy nowy projekt = nowa lekcja dla Twojego AI.
+    💡 Baza wiedzy AI nie jest statyczna - rozwijaj ją ciągle. Każdy nowy projekt = nowa lekcja dla Twojego AI.
   </div>
 </section>
 
 <!-- Slide 48 - Post-project cleanup -->
 <section>
-  <h2 style="margin-bottom:0.3em;">Po skończonym projekcie — porządki</h2>
+  <h2 style="margin-bottom:0.3em;">Po skończonym projekcie - porządki</h2>
   <div style="font-size:0.54em; line-height:1.5; margin-bottom:8px;">
     <p style="margin:3px 0;">☐ <strong class="orange">1.</strong> Poproś AI o aktualizację changelog.md (finalna wersja)</p>
     <p style="margin:3px 0;">☐ <strong class="orange">2.</strong> Wygeneruj / zaktualizuj README.md</p>
@@ -2004,7 +2581,7 @@ pip install pandas streamlit plotly</code></pre>
   <pre style="background:#F0F0F0; border-radius:10px; padding:12px 16px; font-size:0.44em; line-height:1.5; margin:6px 0; border:1px solid #E0E0E0;"><code style="color:#1A1A1A;">Przykładowy prompt:
 
 "Projekt jest zakończony. Proszę:
- 1. Zaktualizuj changelog.md — finalna wersja
+ 1. Zaktualizuj changelog.md - finalna wersja
  2. Wygeneruj README.md na podstawie obecnego stanu repo
  3. Napisz metodologia.md z opisem metod i założeń
  4. Zaproponuj które pliki tymczasowe mogę usunąć
@@ -2028,18 +2605,18 @@ pip install pandas streamlit plotly</code></pre>
 
 <!-- Slide 50 - HITL details -->
 <section>
-  <h2 style="margin-bottom:0.3em;">Human In The Loop — Ty jesteś szefem</h2>
+  <h2 style="margin-bottom:0.3em;">Human In The Loop - Ty jesteś szefem</h2>
   <div style="font-size:0.56em; line-height:1.5; margin-bottom:10px;">
-    <p style="margin:3px 0;">AI pisze kod — <strong class="orange">Ty weryfikujesz logikę biznesową</strong></p>
-    <p style="margin:3px 0;">AI buduje SQL — <strong class="orange">Ty sprawdzasz czy wynik ma sens</strong></p>
-    <p style="margin:3px 0;">AI generuje raport — <strong class="orange">Ty decydujesz co pokazać dyrektorowi</strong></p>
+    <p style="margin:3px 0;">AI pisze kod - <strong class="orange">Ty weryfikujesz logikę biznesową</strong></p>
+    <p style="margin:3px 0;">AI buduje SQL - <strong class="orange">Ty sprawdzasz czy wynik ma sens</strong></p>
+    <p style="margin:3px 0;">AI generuje raport - <strong class="orange">Ty decydujesz co pokazać dyrektorowi</strong></p>
   </div>
   <div class="warning" style="font-size:0.52em; padding:10px 14px; margin-bottom:10px;">
     ⚠️ 75% więcej błędów logicznych w kodzie AI vs ludzkim. Składnia idealna. Logika? <strong>Twoja odpowiedzialność.</strong>
   </div>
   <div style="font-size:0.54em; line-height:1.5;">
     <p style="margin:3px 0;">✅ Weryfikuj wyniki</p>
-    <p style="margin:3px 0;">✅ Rozumiej co AI robi (nie ślepo akceptuj)</p>
+    <p style="margin:3px 0;">✅ Staraj się zrozumieć, co AI robi (nie akceptuj ślepo)</p>
     <p style="margin:3px 0;">✅ Zadawaj pytania kontrolne: <em>"czy na pewno to jest poprawny JOIN?"</em>, <em>"sprawdź czy nie mnoży wierszy"</em></p>
     <p style="margin:3px 0;">✅ Porównuj z oczekiwaniami: <em>"spodziewam się GMV ~500M"</em></p>
   </div>
@@ -2114,7 +2691,7 @@ pip install pandas streamlit plotly</code></pre>
 
 <!-- Slide 52 - Summary + CTA -->
 <section>
-  <h2 style="margin-bottom:0.3em;">Podsumowanie — co zabieracie z tego szkolenia</h2>
+  <h2 style="margin-bottom:0.3em;">Podsumowanie - co zabieracie z tego szkolenia</h2>
   <div style="font-size:0.56em; line-height:1.6; margin-bottom:10px;">
     <p style="margin:2px 0;"><strong class="orange">01</strong> │ Fundamenty &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ wiecie <strong>DLACZEGO</strong> AI</p>
     <p style="margin:2px 0;"><strong class="orange">02</strong> │ Setup &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;→ macie <strong>NARZĘDZIA</strong></p>
@@ -2126,16 +2703,13 @@ pip install pandas streamlit plotly</code></pre>
   <div style="border-top:2px solid var(--allegro-orange); padding-top:10px;">
     <h3 style="font-size:0.9em; margin-bottom:4px;">🎯 Wasze pierwsze kroki po szkoleniu:</h3>
     <div style="font-size:0.52em; line-height:1.55;">
-      <p style="margin:2px 0;">☐ <strong class="orange">1.</strong> Stwórzcie folder nowego projektu</p>
-      <p style="margin:2px 0;">☐ <strong class="orange">2.</strong> Wrzućcie kontekst (opis, SQL-ki, notatki)</p>
-      <p style="margin:2px 0;">☐ <strong class="orange">3.</strong> /init — niech AI skonfiguruje się sam</p>
-      <p style="margin:2px 0;">☐ <strong class="orange">4.</strong> Sklonujcie github-copilot-prompts</p>
+            <p style="margin:2px 0;">☐ <strong class="orange">1.</strong> Stwórzcie set własnych promptów, instrukcji i agentów.</p>
+      <p style="margin:2px 0;">☐ <strong class="orange">2.</strong> Stwórzcie folder nowego projektu</p>
+      <p style="margin:2px 0;">☐ <strong class="orange">3.</strong> Wrzućcie kontekst (opis, SQL-ki, notatki)</p>
+      <p style="margin:2px 0;">☐ <strong class="orange">4.</strong> /init - niech AI skonfiguruje się sam</p>
       <p style="margin:2px 0;">☐ <strong class="orange">5.</strong> Zacznijcie z /write-eda lub /sql-query-builder</p>
       <p style="margin:2px 0;">☐ <strong class="orange">6.</strong> Po tygodniu: poprawcie instrukcje wg doświadczeń</p>
     </div>
-  </div>
-  <div class="tip" style="margin-top:8px; font-size:0.52em; padding:10px 14px; text-align:center;">
-    💡 AI nie zabierze Ci pracy. Ale osoba z AI zabierze ją osobie bez AI. <strong>Zacznijcie dziś.</strong>
   </div>
 </section>
 
