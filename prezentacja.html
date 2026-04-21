@@ -625,7 +625,7 @@
     </div>
   </div>
   <div style="text-align:center; font-size:1.2em; color: var(--allegro-orange);">MCP ↓↓↓</div>
-  <div class="three-col" style="margin-top: 12px;">
+  <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; margin-top: 12px;">
     <div class="card" style="text-align:center;">
       <div style="font-size:1.8em; margin-bottom:8px;">📚</div>
       <h3>Omnidoc</h3>
@@ -640,6 +640,11 @@
       <div style="font-size:1.8em; margin-bottom:8px;">🧩</div>
       <h3>Opbox</h3>
       <p style="font-size:0.58em; color:#767676;">Komponenty frontendowe, design system</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-size:1.8em; margin-bottom:8px;">🗄️</div>
+      <h3>Daddy</h3>
+      <p style="font-size:0.58em; color:#767676;">semantic layer</p>
     </div>
   </div>
   <div class="tip fragment" style="margin-top: 14px; text-align:center;">
@@ -668,11 +673,15 @@
     "tech-docs": {
       "url": "https://technical-documentation-brain.dh-prod.allegrogroup.com/mcp",
       "type": "http"
-    }
+    },
+    "data-catalog": {
+			"type": "http",
+			"url": "https://documentation-service.allegrogroup.com/mcp"
+		}
   }
 }</code></pre>
   <div class="warning" style="font-size:0.55em; padding:10px 14px; margin:8px 0;">
-    ⚠️ Nie działa? Sprawdź: (1) VPN włączony? (2) Checkbox zaznaczony? (3) Restart VS Code
+    ⚠️ Nie działa? Sprawdź: (1) VPN włączony? (2) Checkbox zaznaczony? (3) Restart VS Code (4) Ctrl + Shift + P -> MCP: List Servers
   </div>
 </section>
 
